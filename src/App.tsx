@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import s from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.app}>
+        <div className={s.leftSidebarContainer}>
+            <div className={s.meImg}>me</div>
+        </div>
+        <div className={s.mainContainer}>main
+            <div className={s.main}>
+                <div className={s.name}>
+                    <h1>Say Hi from Alex, framer Developer</h1>
+                </div>
+            </div>
+            <div className={s.aboutContainer}> about me</div>
+            <div className={s.resumeContainer}>Education & Experience</div>
+            <div className={s.skillsContainer}>My skills</div>
+            <div className={s.portfolioContainer}>Featured Projects</div>
+            <div className={s.contactContainer}>Contact</div>
+        </div>
+        <ul className={s.menuContainer}>menu</ul>
+
     </div>
   );
 }

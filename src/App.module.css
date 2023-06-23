@@ -1,0 +1,47 @@
+.app {
+    display: flex;
+    justify-content: space-between;
+}
+.leftSidebarContainer {
+    background-color: burlywood;
+    width: 485px;
+    height: 875px;
+}
+.mainContainer {
+    background-color: bisque;
+    width: 80%;
+    height: 100vh;
+}
+
+.name {
+
+}
+.menuContainer {
+    background-color: cadetblue;
+    right: 68px;
+}
+
+.aboutContainer {
+    background-color: gray;
+    height: 300px;
+}
+
+.resumeContainer {
+    background-color: hotpink;
+    height: 300px;
+}
+.skillsContainer {
+    background-color: darkcyan;
+    height: 300px;
+}
+
+.portfolioContainer {
+    background-color: aquamarine;
+    height: 300px;
+}
+
+.contactContainer {
+    background-color: darkgray;
+    height: 300px;
+}
+
