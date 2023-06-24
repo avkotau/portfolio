@@ -1,0 +1,95 @@
+$hg: 50%;
+
+%tplborder {
+  border: 1px solid;
+}
+
+@mixin displayFlexCenter($fl, $jc, $ai) {
+  display: $fl;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSidebarContainer {
+  background-color: burlywood;
+  @include displayFlexCenter(flex, center, center);
+  width: 485px;
+  height: 100vh;
+  flex: 0.2;
+
+  .leftSidebar {
+    background-color: darkgray;
+    max-width: 285px;
+    max-height: 475px;
+  }
+
+  @extend %tplborder
+}
+
+
+.mainContainer {
+  background-color: bisque;
+  flex: 0.7;
+  height: 100vh;
+
+  @extend %tplborder;
+
+  .main {
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+
+  }
+
+  .name {
+
+  }
+
+  .aboutContainer {
+    background-color: gray;
+    height: $hg;
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder
+  }
+
+  .resumeContainer {
+    background-color: hotpink;
+    height: $hg;
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder
+
+  }
+
+  .skillsContainer {
+    background-color: darkcyan;
+    height: $hg;
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder
+  }
+
+  .portfolioContainer {
+    background-color: aquamarine;
+    height: $hg;
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder
+  }
+
+  .contactContainer {
+    background-color: darkgray;
+    height: $hg;
+    @include displayFlexCenter(flex, center, center);
+    @extend %tplborder
+  }
+}
+
+.menuContainer {
+  background-color: cadetblue;
+  @include displayFlexCenter(flex, center, center);
+  right: 68px;
+  flex: 0.1;
+  @extend %tplborder
+}
