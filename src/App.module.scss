@@ -1,7 +1,11 @@
 $hg: 50%;
-
+//стили border
 %tplborder {
   border: 1px solid;
+}
+
+%flColumn {
+  flex-direction: column;
 }
 
 @mixin displayFlexCenter($fl, $jc, $ai) {
@@ -18,29 +22,45 @@ $hg: 50%;
 .leftSidebarContainer {
   background-color: burlywood;
   @include displayFlexCenter(flex, center, center);
-  width: 485px;
-  height: 100vh;
+  //width: 485px;
+  //height: 100vh;
   flex: 0.2;
 
   .leftSidebar {
     background-color: darkgray;
-    max-width: 285px;
-    max-height: 475px;
+    padding: 50px;
+    @include displayFlexCenter(flex, center, center);
+    flex-direction: column;
+    gap: 20px;
+    //max-width: 285px;
+    //max-height: 475px;
+    img {
+      height: 400px;
+      width: 350px;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        padding: 5px;
+      }
+    }
   }
 
   @extend %tplborder
 }
 
-.mainContainer {
+.heroContent {
   background-color: bisque;
-  flex: 0.7;
+  flex: 0.8;
   height: 100vh;
 
   @extend %tplborder;
 
-  .main {
+  .hero {
     @include displayFlexCenter(flex, center, center);
     @extend %tplborder;
+    @extend %flColumn;
 
   }
 
@@ -48,33 +68,88 @@ $hg: 50%;
 
   }
 
+  .portfolioAnimation {
+    @include displayFlexCenter(flex, center, center);
+    background-color: wheat;
+    height: 200px;
+    width: 100%;
+  }
+
   .aboutContainer {
     background-color: gray;
     height: $hg;
     @include displayFlexCenter(flex, center, center);
-    @extend %tplborder
+    @extend %tplborder;
+    @extend %flColumn;
+
+
+    .title {
+      @include displayFlexCenter(flex, center, center);
+      background-color: honeydew;
+    }
+
+    .text {
+      @include displayFlexCenter(flex, center, center);
+      background-color: rosybrown;
+    }
   }
 
   .resumeContainer {
     background-color: hotpink;
     height: $hg;
     @include displayFlexCenter(flex, center, center);
-    @extend %tplborder
+    @extend %tplborder;
+    @extend %flColumn;
+    .title {
 
+    }
+
+    .educationWork {
+      background-color: tan;
+      @include displayFlexCenter(flex, center, center);
+
+    }
   }
 
   .skillsContainer {
     background-color: darkcyan;
     height: $hg;
     @include displayFlexCenter(flex, center, center);
-    @extend %tplborder
+    @extend %tplborder;
+    @extend %flColumn;
+    .title {
+      padding-bottom: 20px;
+    }
+
+    .skills {
+      background-color: darkcyan;
+      @include displayFlexCenter(flex, center, center);
+      //height: $hg;
+      gap: 30px;
+      flex-wrap: wrap;
+      .item {
+        background-color: darkgray;
+        @include displayFlexCenter(flex, center, center);
+        flex-direction: column;
+        padding: 20px;
+        img {
+          background-color: salmon;
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
   }
 
   .portfolioContainer {
     background-color: aquamarine;
-    height: $hg;
+    //height: $hg;
     @include displayFlexCenter(flex, center, center);
-    @extend %tplborder
+    @extend %tplborder;
+    flex-direction: column;
+    img {
+      border-radius: 30px;
+    }
   }
 
   .contactContainer {
@@ -89,6 +164,7 @@ $hg: 50%;
   background-color: cadetblue;
   @include displayFlexCenter(flex, center, center);
   right: 68px;
-  flex: 0.1;
+  position: fixed;
+  top: 50%;
   @extend %tplborder
 }
