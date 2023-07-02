@@ -8,6 +8,12 @@ $hg: 50%;
   flex-direction: column;
 }
 
+@mixin displayFlexCol($fl, $fd, $g) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @mixin displayFlexCenter($fl, $jc, $ai) {
   display: $fl;
   justify-content: $jc;
@@ -22,8 +28,6 @@ $hg: 50%;
 .leftSidebarContainer {
   background-color: burlywood;
   @include displayFlexCenter(flex, center, center);
-  //width: 485px;
-  //height: 100vh;
   flex: 0.2;
 
   .leftSidebar {
@@ -32,15 +36,17 @@ $hg: 50%;
     @include displayFlexCenter(flex, center, center);
     flex-direction: column;
     gap: 20px;
-    //max-width: 285px;
-    //max-height: 475px;
+    top: 5%;
+    position: fixed;
     img {
       height: 400px;
       width: 350px;
     }
+
     ul {
       display: flex;
       flex-wrap: wrap;
+
       li {
         padding: 5px;
       }
@@ -53,7 +59,6 @@ $hg: 50%;
 .heroContent {
   background-color: bisque;
   flex: 0.8;
-  height: 100vh;
 
   @extend %tplborder;
 
@@ -100,6 +105,7 @@ $hg: 50%;
     @include displayFlexCenter(flex, center, center);
     @extend %tplborder;
     @extend %flColumn;
+
     .title {
 
     }
@@ -117,6 +123,7 @@ $hg: 50%;
     @include displayFlexCenter(flex, center, center);
     @extend %tplborder;
     @extend %flColumn;
+
     .title {
       padding-bottom: 20px;
     }
@@ -127,11 +134,13 @@ $hg: 50%;
       //height: $hg;
       gap: 30px;
       flex-wrap: wrap;
+
       .item {
         background-color: darkgray;
         @include displayFlexCenter(flex, center, center);
         flex-direction: column;
         padding: 20px;
+
         img {
           background-color: salmon;
           height: 50px;
@@ -147,6 +156,7 @@ $hg: 50%;
     @include displayFlexCenter(flex, center, center);
     @extend %tplborder;
     flex-direction: column;
+
     img {
       border-radius: 30px;
     }
@@ -156,15 +166,30 @@ $hg: 50%;
     background-color: darkgray;
     height: $hg;
     @include displayFlexCenter(flex, center, center);
-    @extend %tplborder
+    @extend %tplborder;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      .inputGroupBox {
+
+        .inputGroup {
+          @include displayFlexCol(flex, column, 10px);
+          margin-bottom: 20px;
+        }
+      }
+
+    }
   }
 }
+
 
 .menuContainer {
   background-color: cadetblue;
   @include displayFlexCenter(flex, center, center);
   right: 68px;
   position: fixed;
-  top: 50%;
+  top: 35%;
+  height: 35%;
   @extend %tplborder
 }

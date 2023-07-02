@@ -75,72 +75,56 @@ function App() {
                     <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif" alt=""/>
                     <span>name project</span>
                 </div>
+
                 <div className={s.contactContainer}>
-                    <div className={s.contact}>Contact</div>
+                    <div className={s.contact}>
+                        <h2>Contact</h2>
+                        <form className={s.form} method="" action="">
 
-
-                    <form className=""
-                          method="" action="">
-                        <div className=""
-                        >Your message was sent successfully.
-                        </div>
-                        <div className="">
-                            <div className="">
-                                <div className=""><label>full
-                                    Name <sup>*</sup></label><input type="text" name="full-name" id="full-name"
-                                                                    placeholder="Your Full Name"/></div>
-                            </div>
-                            <div className="">
-                                <div className=""><label>Email <sup>*</sup></label>
-                                    <input type="email" name="email" id="email" placeholder="Your email adress"/>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className=""><label>phone <span>(optional)</span></label><input
-                                    type="text" name="phone-number" id="phone-number" placeholder="Your number phone"/>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className=""><label>subject <sup>*</sup></label><select name="subject"
-                                                                                             id="subject">
-                                    <option value="">Select a subject</option>
-                                    <option value="subject1">Subject 1</option>
-                                    <option value="subject2">Subject 2</option>
-                                    <option value="subject3">Subject 3</option>
-                                </select></div>
-                            </div>
-                            <div className="">
-                                <div className=""><label htmlFor="">your budget <span>(optional)</span></label><input
-                                    type="number" name="budget" id="budget"
-                                    placeholder="A range budget for your project"/></div>
-                            </div>
-                            <div className="">
-                                <div className=""><label htmlFor="">message</label><textarea
-                                    name="message" id="message" placeholder="Wrire your message here ..."></textarea>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className=" upload-attachment">
-                                    <div><label><i
-                                        className=""></i> add an attachment<input type="file"
-                                                                                  name="file"
-                                                                                  id="upload-attachment"/></label>
+                                <div className={s.inputGroupBox}>
+                                    <div className={s.inputGroup}>
+                                        <label htmlFor="name">Name</label>
+                                        <input type="text" name="name" id="name"
+                                               placeholder="Your name"/>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="">
-                                <div className="">
-                                    <button className="" name="submit" type="submit" id="submit-form">send
-                                        message
-                                    </button>
+
+                                <div className={s.inputGroupBox}>
+                                    <div className={s.inputGroup}>
+                                        <label htmlFor="email">Email</label>
+                                        <input type="email" name="email" id="email" placeholder="Your email adress"/>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </form>
+                                <div className={s.inputGroupBox}>
+                                    <div className={s.inputGroup}>
+                                        <label htmlFor="phone-number">phone <span>(optional)</span></label>
+                                        <input
+                                            type="tel" name="phone-number" id="phone-number"
+                                            placeholder="Your number phone"
+                                        />
+                                    </div>
+                                </div>
+                                <div className={s.inputGroupBox}>
+                                    <div className={s.inputGroup}>
+                                        <label htmlFor="message">message</label>
+                                        <textarea
+                                            name="message" id="message" placeholder="Wrire your message here ...">
+                                    </textarea>
+                                    </div>
+                                </div>
+                                <div className={s.inputGroupBox}>
+                                    <div className={s.inputGroup}>
+                                        <button className="" name="submit" type="submit" id="submit-form">send
+                                            message
+                                        </button>
+                                    </div>
+                                </div>
 
-
+                        </form>
+                    </div>
                 </div>
             </div>
+
 
             <div className={s.menuContainer}>
                 <ul className={s.menu}>menu</ul>
