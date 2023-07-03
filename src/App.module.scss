@@ -29,6 +29,7 @@ $hg: 50%;
   background-color: burlywood;
   @include displayFlexCenter(flex, center, center);
   flex: 0.2;
+  height: 100vh; // dont work
 
   .leftSidebar {
     background-color: darkgray;
@@ -38,9 +39,10 @@ $hg: 50%;
     gap: 20px;
     top: 5%;
     position: fixed;
+
     img {
-      height: 400px;
-      width: 350px;
+      height: 350px;
+      width: 284px;
     }
 
     ul {
@@ -49,6 +51,8 @@ $hg: 50%;
 
       li {
         padding: 5px;
+        margin: 5px;
+        background-color: aqua;
       }
     }
   }
@@ -171,6 +175,7 @@ $hg: 50%;
     .form {
       display: flex;
       flex-direction: column;
+
       .inputGroupBox {
 
         .inputGroup {
@@ -190,6 +195,15 @@ $hg: 50%;
   right: 68px;
   position: fixed;
   top: 35%;
-  height: 35%;
-  @extend %tplborder
+
+  @extend %tplborder;
+
+  .menu {
+    @include displayFlexCol(flex, column, 10px);
+    padding: 20px 0;
+    li {
+      padding: 5px;
+      background-color: wheat;
+    }
+  }
 }
