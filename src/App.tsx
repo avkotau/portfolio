@@ -23,102 +23,141 @@ function App() {
                 </div>
             </div>
 
-            <div className={s.heroContent}>
-                <div className={s.hero}>
-                    <div className={s.name}>
-                        <h1>Say Hi from Alex, framer Developer</h1>
+            <div className={s.heroContainer}>
+
+                <div className={s.heroContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>Hello my name is Alex I'm Frontend Developer</div>
+                        <div className={s.portfolioAnimation}>
+                            scroll-animation to my projects
+                        </div>
                     </div>
-                    <div className={s.portfolioAnimation}>
-                        scroll-animation to my projects
-                    </div>
+
                 </div>
-                <div className={s.aboutContainer}>
-                    <div className={s.title}>about me</div>
-                    <div className={s.text}>about me text</div>
-                </div>
-                <div className={s.resumeContainer}>
-                    <div className={s.title}>Education & Experience</div>
-                    <div className={s.educationWork}>education Work information</div>
-                </div>
-                <div className={s.skillsContainer}>
-                    <div className={s.title}>My Advantages</div>
-                    <div className={s.skills}>
-                        <div className={s.item}>
-                            <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                            <span>React</span>
-
-                        </div>
-                        <div className={s.item}>
-                            <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                            <span>ts</span>
-
-                        </div>
-                        <div className={s.item}>
-                            <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                            <span>html</span>
-
-                        </div>
-                        <div className={s.item}>
-                            <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                            <span>ccs</span>
-
-                        </div>
-                        <div className={s.item}>
-                            <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                            <span>js</span>
-
+                <div className={s.aboutContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>about me title</div>
+                        <div className={s.text}>Идейные соображения высшего порядка, а также сплочённость команды
+                            профессионалов говорит о возможностях соответствующих условий активизации. Каждый из нас
+                            понимает очевидную вещь: экономическая повестка сегодняшнего дня напрямую зависит от новых
+                            принципов формирования материально-технической и кадровой базы. И нет сомнений, что
+                            независимые государства заблокированы в рамках своих собственных рациональных ограничений.
+                            Есть над чем задуматься: ключевые особенности структуры проекта набирают популярность среди
+                            определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям.
+                            Ясность нашей позиции очевидна: высококачественный прототип будущего проекта обеспечивает
+                            широкому кругу (специалистов) участие в формировании приоретизации разума над эмоциями.
                         </div>
                     </div>
                 </div>
-                <div className={s.portfolioContainer}>
-                    <div className={s.portfolio}>Featured Projects</div>
-                    <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif" alt=""/>
-                    <span>name project</span>
+                <div className={s.resumeContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>Education & Experience</div>
+                        <div className={s.educationWork}>education Work information</div>
+                    </div>
+                </div>
+                <div className={s.skillsContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>My Advantages</div>
+                        <div className={s.skills}>
+                            <div className={s.item}>
+                                <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
+                                <span>React</span>
+
+                            </div>
+                            <div className={s.item}>
+                                <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
+                                <span>ts</span>
+
+                            </div>
+                            <div className={s.item}>
+                                <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
+                                <span>html</span>
+
+                            </div>
+                            <div className={s.item}>
+                                <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
+                                <span>ccs</span>
+
+                            </div>
+                            <div className={s.item}>
+                                <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
+                                <span>js</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={s.portfolioContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>Featured Projects</div>
+                        <figure>
+                            <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                                <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+                                     alt=""/>
+                            </a>
+                            <figcaption>
+                                <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                                    name project
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                                <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+                                     alt=""/>
+                            </a>
+                            <figcaption>
+                                <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                                    name project
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
 
-                <div className={s.contactContainer}>
-                    <div className={s.contact}>
-                        <h2>Contact</h2>
+                <div className={s.contactContent}>
+                    <div className={s.wrapContent}>
+                        <div className={s.title}>Contact</div>
                         <form className={s.form} method="" action="">
 
-                                <div className={s.inputGroupBox}>
-                                    <div className={s.inputGroup}>
-                                        <label htmlFor="name">Name</label>
-                                        <input type="text" name="name" id="name"
-                                               placeholder="Your name"/>
-                                    </div>
+                            <div className={s.inputGroupBox}>
+                                <div className={s.inputGroup}>
+                                    <label htmlFor="name">Name</label>
+                                    <input type="text" name="name" id="name"
+                                           placeholder="Your name"/>
                                 </div>
+                            </div>
 
-                                <div className={s.inputGroupBox}>
-                                    <div className={s.inputGroup}>
-                                        <label htmlFor="email">Email</label>
-                                        <input type="email" name="email" id="email" placeholder="Your email adress"/>
-                                    </div>
+                            <div className={s.inputGroupBox}>
+                                <div className={s.inputGroup}>
+                                    <label htmlFor="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Your email adress"/>
                                 </div>
-                                <div className={s.inputGroupBox}>
-                                    <div className={s.inputGroup}>
-                                        <label htmlFor="phone-number">phone <span>(optional)</span></label>
-                                        <input
-                                            type="tel" name="phone-number" id="phone-number"
-                                            placeholder="Your number phone"
-                                        />
-                                    </div>
+                            </div>
+                            <div className={s.inputGroupBox}>
+                                <div className={s.inputGroup}>
+                                    <label htmlFor="phone-number">phone <span>(optional)</span></label>
+                                    <input
+                                        type="tel" name="phone-number" id="phone-number"
+                                        placeholder="Your number phone"
+                                    />
                                 </div>
-                                <div className={s.inputGroupBox}>
-                                    <div className={s.inputGroup}>
-                                        <label htmlFor="message">message</label>
-                                        <textarea
-                                            name="message" id="message" placeholder="Wrire your message here ...">
+                            </div>
+                            <div className={s.inputGroupBox}>
+                                <div className={s.inputGroup}>
+                                    <label htmlFor="message">message</label>
+                                    <textarea
+                                        name="message" id="message" placeholder="Wrire your message here ...">
                                     </textarea>
-                                    </div>
                                 </div>
-                                <div className={s.inputGroupBox}>
-                                    <div className={s.inputGroup}>
-                                        <button className="" name="submit" type="submit" id="submit-form">send
-                                            message
-                                        </button>
-                                    </div>
+                            </div>
+                            <div className={s.inputGroupBox}>
+                                <div className={s.inputGroup}>
+                                    <button className="" name="submit" type="submit" id="submit-form">send
+                                        message
+                                    </button>
                                 </div>
+                            </div>
 
                         </form>
                     </div>

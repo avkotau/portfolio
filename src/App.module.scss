@@ -1,5 +1,8 @@
-$hg: 50%;
-//стили border
+//height
+$minHg: 40%;
+//max-width
+$maxW: 770px;
+//style border
 %tplborder {
   border: 1px solid;
 }
@@ -20,190 +23,318 @@ $hg: 50%;
   align-items: $ai;
 }
 
-.app {
-  display: flex;
-  justify-content: space-between;
+%titleStyle {
+  font-size: 36px;
+  margin: 0 0 30px 0;
+  text-align: center;
 }
 
-.leftSidebarContainer {
-  background-color: burlywood;
-  @include displayFlexCenter(flex, center, center);
-  flex: 0.2;
-  height: 100vh; // dont work
+%buttonStyle {
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 20px;
+}
 
-  .leftSidebar {
-    background-color: darkgray;
-    padding: 50px;
-    @include displayFlexCenter(flex, center, center);
-    flex-direction: column;
-    gap: 20px;
-    top: 5%;
+.app {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+
+
+  .leftSidebarContainer {
+    flex: 0.3;
     position: fixed;
+    left: 0;
 
-    img {
-      height: 350px;
-      width: 284px;
+    .leftSidebar {
+      background-color: rosybrown;
+      padding: 50px;
+      @include displayFlexCenter(flex, center, center);
+      flex-direction: column;
+      gap: 20px;
+      top: 120px;
+      position: fixed;
+      //width: 20%;
+      min-width: 300px;
+      border: 1px solid #565656;
+      border-radius: 30px;
+
+      img {
+        min-width: 284px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          padding: 5px;
+          margin: 5px;
+          background-color: aqua;
+        }
+      }
+
+      button {
+        @extend %buttonStyle;
+        width: 300px;
+
+      }
     }
 
-    ul {
-      display: flex;
-      flex-wrap: wrap;
+    @media (max-width: 1400px) {
+      .leftSidebar {
+        padding: 20px;
+      }
+    }
+
+    @extend %tplborder
+  }
+
+
+  .heroContainer {
+    background-color: bisque;
+    flex: 0.7;
+    @extend %tplborder;
+
+    .heroContent {
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+      @extend %flColumn;
+      min-height: $minHg;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        .portfolioAnimation {
+          @include displayFlexCenter(flex, center, center);
+          background-color: wheat;
+
+        }
+      }
+    }
+
+
+    .aboutContent {
+      background-color: gray;
+      min-height: $minHg;
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+      @extend %flColumn;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          //@include displayFlexCenter(flex, center, center);
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        .text {
+          @include displayFlexCenter(flex, center, center);
+          background-color: rosybrown;
+        }
+      }
+
+
+    }
+
+    .resumeContent {
+      background-color: hotpink;
+      min-height: $minHg;
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+      @extend %flColumn;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          //@include displayFlexCenter(flex, center, center);
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        .educationWork {
+          background-color: tan;
+          @include displayFlexCenter(flex, center, center);
+
+        }
+      }
+
+
+    }
+
+    .skillsContent {
+      background-color: darkcyan;
+      min-height: $minHg;
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+      @extend %flColumn;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          //@include displayFlexCenter(flex, center, center);
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        .skills {
+          background-color: darkcyan;
+          @include displayFlexCenter(flex, center, center);
+          //min-height: $minHg;
+          gap: 30px;
+          flex-wrap: wrap;
+
+          .item {
+            background-color: darkgray;
+            @include displayFlexCenter(flex, center, center);
+            flex-direction: column;
+            padding: 20px;
+
+            img {
+              background-color: salmon;
+              height: 50px;
+              width: 50px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .portfolioContent {
+      background-color: aquamarine;
+      //height: $hg;
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+      flex-direction: column;
+      min-height: $minHg;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          //@include displayFlexCenter(flex, center, center);
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        figure {
+          a {
+            img {
+              width: 100%;
+              border-radius: 30px;
+            }
+          }
+
+          figcaption {
+            font-size: 20px;
+          }
+        }
+
+      }
+
+
+    }
+
+    .contactContent {
+      background-color: darkgray;
+      min-height: $minHg;
+      @include displayFlexCenter(flex, center, center);
+      @extend %tplborder;
+
+      .wrapContent {
+        max-width: $maxW;
+
+        .title {
+          //@include displayFlexCenter(flex, center, center);
+          @extend %titleStyle;
+          background-color: honeydew;
+        }
+
+        .form {
+          display: flex;
+          flex-direction: column;
+
+          .inputGroupBox {
+
+            .inputGroup {
+              @include displayFlexCol(flex, column, 10px);
+              margin-bottom: 20px;
+
+              button {
+                @extend %buttonStyle;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .menuContainer {
+    background-color: cadetblue;
+    @include displayFlexCenter(flex, center, center);
+    right: 68px;
+    position: fixed;
+    top: 35%;
+
+    @extend %tplborder;
+
+    .menu {
+      @include displayFlexCol(flex, column, 10px);
+      padding: 20px 0;
 
       li {
         padding: 5px;
-        margin: 5px;
-        background-color: aqua;
+        background-color: wheat;
       }
     }
   }
-
-  @extend %tplborder
 }
 
-.heroContent {
-  background-color: bisque;
-  flex: 0.8;
-
-  @extend %tplborder;
-
-  .hero {
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
-    @extend %flColumn;
-
-  }
-
-  .name {
-
-  }
-
-  .portfolioAnimation {
-    @include displayFlexCenter(flex, center, center);
-    background-color: wheat;
-    height: 200px;
-    width: 100%;
-  }
-
-  .aboutContainer {
-    background-color: gray;
-    height: $hg;
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
-    @extend %flColumn;
-
-
-    .title {
-      @include displayFlexCenter(flex, center, center);
-      background-color: honeydew;
-    }
-
-    .text {
-      @include displayFlexCenter(flex, center, center);
-      background-color: rosybrown;
-    }
-  }
-
-  .resumeContainer {
-    background-color: hotpink;
-    height: $hg;
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
-    @extend %flColumn;
-
-    .title {
-
-    }
-
-    .educationWork {
-      background-color: tan;
-      @include displayFlexCenter(flex, center, center);
-
-    }
-  }
-
-  .skillsContainer {
-    background-color: darkcyan;
-    height: $hg;
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
-    @extend %flColumn;
-
-    .title {
-      padding-bottom: 20px;
-    }
-
-    .skills {
-      background-color: darkcyan;
-      @include displayFlexCenter(flex, center, center);
-      //height: $hg;
-      gap: 30px;
-      flex-wrap: wrap;
-
-      .item {
-        background-color: darkgray;
-        @include displayFlexCenter(flex, center, center);
-        flex-direction: column;
-        padding: 20px;
-
-        img {
-          background-color: salmon;
-          height: 50px;
-          width: 50px;
-        }
-      }
-    }
-  }
-
-  .portfolioContainer {
-    background-color: aquamarine;
-    //height: $hg;
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
+@media (max-width: 1200px) {
+  .app {
     flex-direction: column;
+    margin: 0;
 
-    img {
-      border-radius: 30px;
-    }
-  }
+    .leftSidebarContainer {
+      position: static;
 
-  .contactContainer {
-    background-color: darkgray;
-    height: $hg;
-    @include displayFlexCenter(flex, center, center);
-    @extend %tplborder;
+      .leftSidebar {
+        position: static;
+        max-width: 767px;
+        margin: 0 auto;
 
-    .form {
-      display: flex;
-      flex-direction: column;
-
-      .inputGroupBox {
-
-        .inputGroup {
-          @include displayFlexCol(flex, column, 10px);
-          margin-bottom: 20px;
+        button {
+          @extend %buttonStyle;
+          width: 100%;
         }
       }
+    }
 
+    .menuContainer {
+      display: none;
     }
   }
 }
 
+@media (max-width: 992px) {
 
-.menuContainer {
-  background-color: cadetblue;
-  @include displayFlexCenter(flex, center, center);
-  right: 68px;
-  position: fixed;
-  top: 35%;
+}
 
-  @extend %tplborder;
+@media (max-width: 767px) {
 
-  .menu {
-    @include displayFlexCol(flex, column, 10px);
-    padding: 20px 0;
-    li {
-      padding: 5px;
-      background-color: wheat;
-    }
-  }
 }
