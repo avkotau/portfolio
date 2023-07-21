@@ -41,85 +41,73 @@ $maxW: 770px;
   margin-right: 100px;
 
 
-  .leftSidebarContainer {
+  .leftSidebar {
     flex: 0.3;
-    position: fixed;
     left: 0;
 
-    .leftSidebar {
-      background-color: rosybrown;
-      padding: 50px;
-      @include displayFlexCenter(flex, center, center);
-      flex-direction: column;
-      gap: 20px;
-      top: 120px;
-      position: fixed;
-      //width: 20%;
-      min-width: 300px;
-      border: 1px solid #565656;
-      border-radius: 30px;
+    background-color: rosybrown;
+    padding: 50px;
+    @include displayFlexCenter(flex, center, center);
+    flex-direction: column;
+    gap: 20px;
+    top: 120px;
+    position: fixed;
+    //width: 20%;
+    min-width: 300px;
+    border: 1px solid #565656;
+    border-radius: 30px;
 
-      img {
-        min-width: 284px;
-      }
+    img {
+      min-width: 284px;
+    }
 
-      ul {
-        display: flex;
-        flex-wrap: wrap;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
 
-        li {
-          padding: 5px;
-          margin: 5px;
-          background-color: aqua;
-        }
-      }
-
-      button {
-        @extend %buttonStyle;
-        width: 300px;
-
+      li {
+        padding: 5px;
+        margin: 5px;
+        background-color: aqua;
       }
     }
 
-    @media (max-width: 1400px) {
-      .leftSidebar {
-        padding: 20px;
-      }
-    }
+    button {
+      @extend %buttonStyle;
+      width: 300px;
 
-    @extend %tplborder
+    }
   }
 
+  @media (max-width: 1400px) {
+    .leftSidebar {
+      padding: 20px;
+    }
+  }
 
-  .heroContainer {
+  .container {
     background-color: bisque;
     flex: 0.7;
     @extend %tplborder;
 
-    .heroContent {
+    .hero {
       @include displayFlexCenter(flex, center, center);
       @extend %tplborder;
       @extend %flColumn;
       min-height: $minHg;
 
-      .wrapContent {
-        max-width: $maxW;
+      .title {
+        @extend %titleStyle;
+        background-color: honeydew;
+      }
 
-        .title {
-          @extend %titleStyle;
-          background-color: honeydew;
-        }
-
-        .portfolioAnimation {
-          @include displayFlexCenter(flex, center, center);
-          background-color: wheat;
-
-        }
+      .portfolioAnimation {
+        @include displayFlexCenter(flex, center, center);
+        background-color: wheat;
       }
     }
 
-
-    .aboutContent {
+    .about {
       background-color: gray;
       min-height: $minHg;
       @include displayFlexCenter(flex, center, center);
@@ -130,7 +118,6 @@ $maxW: 770px;
         max-width: $maxW;
 
         .title {
-          //@include displayFlexCenter(flex, center, center);
           @extend %titleStyle;
           background-color: honeydew;
         }
@@ -140,143 +127,111 @@ $maxW: 770px;
           background-color: rosybrown;
         }
       }
-
-
     }
 
-    .resumeContent {
+    .resume {
       background-color: hotpink;
       min-height: $minHg;
       @include displayFlexCenter(flex, center, center);
       @extend %tplborder;
       @extend %flColumn;
 
-      .wrapContent {
-        max-width: $maxW;
-
-        .title {
-          //@include displayFlexCenter(flex, center, center);
-          @extend %titleStyle;
-          background-color: honeydew;
-        }
-
-        .educationWork {
-          background-color: tan;
-          @include displayFlexCenter(flex, center, center);
-
-        }
+      .title {
+        //@include displayFlexCenter(flex, center, center);
+        @extend %titleStyle;
+        background-color: honeydew;
       }
 
-
+      .educationWork {
+        background-color: tan;
+        @include displayFlexCenter(flex, center, center);
+      }
     }
 
-    .skillsContent {
+    .skills {
       background-color: darkcyan;
       min-height: $minHg;
       @include displayFlexCenter(flex, center, center);
       @extend %tplborder;
-      @extend %flColumn;
+      flex-direction: column;
 
-      .wrapContent {
-        max-width: $maxW;
+      .title {
+        @extend %titleStyle;
+        background-color: honeydew;
+      }
 
-        .title {
-          //@include displayFlexCenter(flex, center, center);
-          @extend %titleStyle;
-          background-color: honeydew;
-        }
+      .skills {
+        background-color: darkcyan;
+        @include displayFlexCenter(flex, center, center);
+        flex-direction: row;
+        //min-height: $minHg;
+        gap: 30px;
+        flex-wrap: wrap;
 
-        .skills {
-          background-color: darkcyan;
+        .item {
+          background-color: darkgray;
           @include displayFlexCenter(flex, center, center);
-          //min-height: $minHg;
-          gap: 30px;
-          flex-wrap: wrap;
+          flex-direction: column;
+          padding: 20px;
 
-          .item {
-            background-color: darkgray;
-            @include displayFlexCenter(flex, center, center);
-            flex-direction: column;
-            padding: 20px;
-
-            img {
-              background-color: salmon;
-              height: 50px;
-              width: 50px;
-            }
+          img {
+            background-color: salmon;
+            height: 50px;
+            width: 50px;
           }
         }
       }
-
-
     }
 
-    .portfolioContent {
+    .portfolio {
       background-color: aquamarine;
-      //height: $hg;
       @include displayFlexCenter(flex, center, center);
       @extend %tplborder;
       flex-direction: column;
       min-height: $minHg;
 
-      .wrapContent {
-        max-width: $maxW;
-
-        .title {
-          //@include displayFlexCenter(flex, center, center);
-          @extend %titleStyle;
-          background-color: honeydew;
-        }
-
-        figure {
-          a {
-            img {
-              width: 100%;
-              border-radius: 30px;
-            }
-          }
-
-          figcaption {
-            font-size: 20px;
-          }
-        }
-
+      .title {
+        @extend %titleStyle;
+        background-color: honeydew;
       }
 
+      figure {
+        a {
+          img {
+            width: 100%;
+            border-radius: 30px;
+          }
+        }
 
+        figcaption {
+          font-size: 20px;
+        }
+      }
     }
 
-    .contactContent {
+    .contact {
       background-color: darkgray;
       min-height: $minHg;
       @include displayFlexCenter(flex, center, center);
       @extend %tplborder;
+      flex-direction: column;
 
-      .wrapContent {
-        max-width: $maxW;
+      .title {
+        @extend %titleStyle;
+        background-color: honeydew;
+      }
 
-        .title {
-          //@include displayFlexCenter(flex, center, center);
-          @extend %titleStyle;
-          background-color: honeydew;
-        }
+      .form {
+        display: flex;
+        flex-direction: column;
 
-        .form {
-          display: flex;
-          flex-direction: column;
+        .inputGroup {
+          @include displayFlexCol(flex, column, 10px);
+          margin-bottom: 20px;
 
-          .inputGroupBox {
-
-            .inputGroup {
-              @include displayFlexCol(flex, column, 10px);
-              margin-bottom: 20px;
-
-              button {
-                @extend %buttonStyle;
-              }
-            }
+          button {
+            @extend %buttonStyle;
           }
-
         }
       }
 
@@ -284,23 +239,18 @@ $maxW: 770px;
 
   }
 
-  .menuContainer {
-    background-color: cadetblue;
-    @include displayFlexCenter(flex, center, center);
+  .menu {
+    @include displayFlexCol(flex, column, 10px);
+    padding: 20px 0;
     right: 68px;
     position: fixed;
     top: 35%;
-
+    background-color: cadetblue;
     @extend %tplborder;
 
-    .menu {
-      @include displayFlexCol(flex, column, 10px);
-      padding: 20px 0;
-
-      li {
-        padding: 5px;
-        background-color: wheat;
-      }
+    li {
+      padding: 5px;
+      background-color: wheat;
     }
   }
 }
@@ -319,7 +269,6 @@ $maxW: 770px;
         margin: 0 auto;
 
         button {
-          @extend %buttonStyle;
           width: 100%;
         }
       }
