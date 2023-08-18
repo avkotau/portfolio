@@ -1,3 +1,6 @@
+@use './styles/displayFlexCenter' as a;
+@use './styles/displayFlexCol' as b;
+
 //height
 $minHg: 40%;
 //max-width
@@ -11,17 +14,17 @@ $maxW: 770px;
   flex-direction: column;
 }
 
-@mixin displayFlexCol($fl, $fd, $g) {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+//@mixin b.displayFlexCol($fl, $fd, $g) {
+//  display: flex;
+//  flex-direction: column;
+//  gap: 10px;
+//}
 
-@mixin displayFlexCenter($fl, $jc, $ai) {
-  display: $fl;
-  justify-content: $jc;
-  align-items: $ai;
-}
+//@mixin displayFlexCenter($fl, $jc, $ai) {
+//  display: $fl;
+//  justify-content: $jc;
+//  align-items: $ai;
+//}
 
 %titleStyle {
   font-size: 36px;
@@ -45,9 +48,9 @@ $maxW: 770px;
     flex: 0.3;
     left: 0;
 
-    background-color: rosybrown;
+    //background-color: rosybrown;
     padding: 50px;
-    @include displayFlexCenter(flex, center, center);
+    @include a.displayFlexCenter(flex, center, center);
     flex-direction: column;
     gap: 20px;
     top: 120px;
@@ -68,7 +71,7 @@ $maxW: 770px;
       li {
         padding: 5px;
         margin: 5px;
-        background-color: aqua;
+        //background-color: aqua;
       }
     }
 
@@ -79,38 +82,38 @@ $maxW: 770px;
     }
   }
 
-  @media (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .leftSidebar {
       padding: 20px;
     }
   }
 
-  .container {
-    background-color: bisque;
+  .main {
+    //background-color: bisque;
     flex: 0.7;
     @extend %tplborder;
 
     .hero {
-      @include displayFlexCenter(flex, center, center);
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       @extend %flColumn;
       min-height: $minHg;
 
       .title {
         @extend %titleStyle;
-        background-color: honeydew;
+        //background-color: honeydew;
       }
 
       .portfolioAnimation {
-        @include displayFlexCenter(flex, center, center);
-        background-color: wheat;
+        @include a.displayFlexCenter(flex, center, center);
+        //background-color: wheat;
       }
     }
 
     .about {
-      background-color: gray;
+      //background-color: gray;
       min-height: $minHg;
-      @include displayFlexCenter(flex, center, center);
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       @extend %flColumn;
 
@@ -119,63 +122,63 @@ $maxW: 770px;
 
         .title {
           @extend %titleStyle;
-          background-color: honeydew;
+          //background-color: honeydew;
         }
 
         .text {
-          @include displayFlexCenter(flex, center, center);
-          background-color: rosybrown;
+          @include a.displayFlexCenter(flex, center, center);
+          //background-color: rosybrown;
         }
       }
     }
 
     .resume {
-      background-color: hotpink;
+      //background-color: hotpink;
       min-height: $minHg;
-      @include displayFlexCenter(flex, center, center);
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       @extend %flColumn;
 
       .title {
-        //@include displayFlexCenter(flex, center, center);
+        //@include a.displayFlexCenter(flex, center, center);
         @extend %titleStyle;
-        background-color: honeydew;
+        //background-color: honeydew;
       }
 
       .educationWork {
-        background-color: tan;
-        @include displayFlexCenter(flex, center, center);
+        //background-color: tan;
+        @include a.displayFlexCenter(flex, center, center);
       }
     }
 
     .skills {
-      background-color: darkcyan;
+      //background-color: darkcyan;
       min-height: $minHg;
-      @include displayFlexCenter(flex, center, center);
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       flex-direction: column;
 
       .title {
         @extend %titleStyle;
-        background-color: honeydew;
+        //background-color: honeydew;
       }
 
       .skills {
-        background-color: darkcyan;
-        @include displayFlexCenter(flex, center, center);
+        //background-color: darkcyan;
+        @include a.displayFlexCenter(flex, center, center);
         flex-direction: row;
         //min-height: $minHg;
         gap: 30px;
         flex-wrap: wrap;
 
         .item {
-          background-color: darkgray;
-          @include displayFlexCenter(flex, center, center);
+          //background-color: darkgray;
+          @include a.displayFlexCenter(flex, center, center);
           flex-direction: column;
           padding: 20px;
 
           img {
-            background-color: salmon;
+            //background-color: salmon;
             height: 50px;
             width: 50px;
           }
@@ -184,15 +187,15 @@ $maxW: 770px;
     }
 
     .portfolio {
-      background-color: aquamarine;
-      @include displayFlexCenter(flex, center, center);
+      //background-color: aquamarine;
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       flex-direction: column;
       min-height: $minHg;
 
       .title {
         @extend %titleStyle;
-        background-color: honeydew;
+        //background-color: honeydew;
       }
 
       figure {
@@ -210,15 +213,15 @@ $maxW: 770px;
     }
 
     .contact {
-      background-color: darkgray;
+      //background-color: darkgray;
       min-height: $minHg;
-      @include displayFlexCenter(flex, center, center);
+      @include a.displayFlexCenter(flex, center, center);
       @extend %tplborder;
       flex-direction: column;
 
       .title {
         @extend %titleStyle;
-        background-color: honeydew;
+        //background-color: honeydew;
       }
 
       .form {
@@ -226,7 +229,7 @@ $maxW: 770px;
         flex-direction: column;
 
         .inputGroup {
-          @include displayFlexCol(flex, column, 10px);
+          @include b.displayFlexCol(flex, column, 10px);
           margin-bottom: 20px;
 
           button {
@@ -239,23 +242,10 @@ $maxW: 770px;
 
   }
 
-  .menu {
-    @include displayFlexCol(flex, column, 10px);
-    padding: 20px 0;
-    right: 68px;
-    position: fixed;
-    top: 35%;
-    background-color: cadetblue;
-    @extend %tplborder;
 
-    li {
-      padding: 5px;
-      background-color: wheat;
-    }
-  }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .app {
     flex-direction: column;
     margin: 0;
@@ -274,16 +264,16 @@ $maxW: 770px;
       }
     }
 
-    .menuContainer {
-      display: none;
-    }
+    //.menuContainer {
+    //  display: none;
+    //}
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
 
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
 }
