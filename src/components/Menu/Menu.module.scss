@@ -1,13 +1,14 @@
-@use "../../styles/displayFlexCol" as a;
+@use "../../styles/mixins" as m;
+@use '../../styles/placeholders';
 
 .menu {
-  @include a.displayFlexCol(flex, column, 10px);
+  @include m.displayFlexCol(flex, column, 10px);
   padding: 20px 0;
   right: 68px;
   position: fixed;
   top: 35%;
   //background-color: cadetblue;
-  //@extend %tplborder;
+  @extend %tplborder;
   border-radius: 30px;
   li {
     padding: 5px;

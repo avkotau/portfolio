@@ -1,0 +1,40 @@
+@use '../../styles/mixins' as a;
+@use '../../styles/placeholders';
+
+.leftSidebar {
+  flex: 0.3;
+  left: 0;
+
+  //background-color: rosybrown;
+  padding: 50px;
+  @include a.displayFlexCenter(flex, center, center);
+  flex-direction: column;
+  gap: 20px;
+  top: 120px;
+  position: fixed;
+  //width: 20%;
+  min-width: 300px;
+  border: 1px solid #565656;
+  border-radius: 30px;
+
+  img {
+    min-width: 284px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      padding: 5px;
+      margin: 5px;
+      //background-color: aqua;
+    }
+  }
+
+  button {
+    @extend %buttonStyle;
+    width: 300px;
+
+  }
+}

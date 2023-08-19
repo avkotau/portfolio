@@ -5,6 +5,7 @@ import s from './App.module.scss';
 import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
 
+
 function App() {
     return (
         <div className={s.app}>
@@ -16,3 +17,5 @@ function App() {
 }
 
 export default App;
+
+

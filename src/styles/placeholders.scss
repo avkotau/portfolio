@@ -1,0 +1,21 @@
+//style border
+%tplborder {
+  border: 1px solid;
+}
+
+%flColumn {
+  flex-direction: column;
+}
+
+
+%titleStyle {
+  font-size: 36px;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+%buttonStyle {
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 20px;
+}

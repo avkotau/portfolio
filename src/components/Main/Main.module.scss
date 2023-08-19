@@ -1,0 +1,159 @@
+@use "../../styles/mixins" as m;
+@use '../../styles/variables' as h;
+@use '../../styles/variables' as w; //удалить один use и испольщовать только один
+@use '../../styles/placeholders';
+
+
+.main {
+  //background-color: bisque;
+  flex: 0.7;
+  @extend %tplborder;
+
+  .hero {
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    @extend %flColumn;
+    min-height: h.$minHg;
+
+    .title {
+      @extend %titleStyle;
+      //background-color: honeydew;
+    }
+
+    .portfolioAnimation {
+      @include m.displayFlexCenter(flex, center, center);
+      //background-color: wheat;
+    }
+  }
+
+  .about {
+    //background-color: gray;
+    min-height: h.$minHg;
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    @extend %flColumn;
+
+    .wrapContent {
+      max-width: w.$maxW;
+
+      .title {
+        @extend %titleStyle;
+        //background-color: honeydew;
+      }
+
+      .text {
+        @include m.displayFlexCenter(flex, center, center);
+        //background-color: rosybrown;
+      }
+    }
+  }
+
+  .resume {
+    //background-color: hotpink;
+    min-height: h.$minHg;
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    @extend %flColumn;
+
+    .title {
+      //@include m.displayFlexCenter(flex, center, center);
+      @extend %titleStyle;
+      //background-color: honeydew;
+    }
+
+    .educationWork {
+      //background-color: tan;
+      @include m.displayFlexCenter(flex, center, center);
+    }
+  }
+
+  .skills {
+    //background-color: darkcyan;
+    min-height: h.$minHg;
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    flex-direction: column;
+
+    .title {
+      @extend %titleStyle;
+      //background-color: honeydew;
+    }
+
+    .skills {
+      //background-color: darkcyan;
+      @include m.displayFlexCenter(flex, center, center);
+      flex-direction: row;
+      //min-height: h.$minHg;
+      gap: 30px;
+      flex-wrap: wrap;
+
+      .item {
+        //background-color: darkgray;
+        @include m.displayFlexCenter(flex, center, center);
+        flex-direction: column;
+        padding: 20px;
+
+        img {
+          //background-color: salmon;
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    //background-color: aquamarine;
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    flex-direction: column;
+    min-height: h.$minHg;
+
+    .title {
+      @extend %titleStyle;
+      //background-color: honeydew;
+    }
+
+    figure {
+      a {
+        img {
+          width: 100%;
+          border-radius: 30px;
+        }
+      }
+
+      figcaption {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .contact {
+    //background-color: darkgray;
+    min-height: h.$minHg;
+    @include m.displayFlexCenter(flex, center, center);
+    @extend %tplborder;
+    flex-direction: column;
+
+    .title {
+      @extend %titleStyle;
+      //background-color: honeydew;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      .inputGroup {
+        @include m.displayFlexCol(flex, column, 10px);
+        margin-bottom: 20px;
+
+        button {
+          @extend %buttonStyle;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../../App.module.scss";
+import s from './LeftSidebar.module.scss'
 
 const LeftSidebar = () => {
     return (
@@ -22,3 +22,6 @@ const LeftSidebar = () => {
 };
 
 export default LeftSidebar;
+
+
+
