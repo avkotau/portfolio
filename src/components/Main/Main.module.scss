@@ -1,6 +1,5 @@
 @use "../../styles/mixins" as m;
-@use '../../styles/variables' as h;
-@use '../../styles/variables' as w; //удалить один use и испольщовать только один
+@use '../../styles/variables' as s;
 @use '../../styles/placeholders';
 
 
@@ -9,11 +8,34 @@
   flex: 0.7;
   @extend %tplborder;
 
+  .circleContainer {
+    margin-left: auto;
+    margin-right: 30px;
+
+    .rotatingText {
+      //width: 100%;
+      animation: spin 10s linear infinite;
+    }
+
+    //.lasLaArrowDown {
+    //  color: #fff;
+    //  display: block;
+    //  font-size: 40px;
+    //  position: absolute;
+    //}
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+
   .hero {
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     @extend %flColumn;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
 
     .title {
       @extend %titleStyle;
@@ -28,13 +50,13 @@
 
   .about {
     //background-color: gray;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     @extend %flColumn;
 
     .wrapContent {
-      max-width: w.$maxW;
+      max-width: s.$maxW;
 
       .title {
         @extend %titleStyle;
@@ -50,7 +72,7 @@
 
   .resume {
     //background-color: hotpink;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     @extend %flColumn;
@@ -69,7 +91,7 @@
 
   .skills {
     //background-color: darkcyan;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     flex-direction: column;
@@ -107,7 +129,7 @@
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     flex-direction: column;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
 
     .title {
       @extend %titleStyle;
@@ -130,7 +152,7 @@
 
   .contact {
     //background-color: darkgray;
-    min-height: h.$minHg;
+    min-height: s.$minHg;
     @include m.displayFlexCenter(flex, center, center);
     @extend %tplborder;
     flex-direction: column;
@@ -141,19 +163,53 @@
     }
 
     .form {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
 
-      .inputGroup {
-        @include m.displayFlexCol(flex, column, 10px);
-        margin-bottom: 20px;
+        .inputGroup {
+          flex: 0 0 50%; // делает каждую группу ввода занимать половину ширины формы (2 группы в ряд)
+          padding: 0 15px; // добавил небольшие отступы между группами
+          margin-bottom: 20px;
 
-        button {
-          @extend %buttonStyle;
+          label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 16px;
+
+            span {
+              font-weight: normal;
+              color: #999;
+            }
+          }
+
+          input, textarea {
+            background: none;
+            border: none;
+            border-bottom: 2px solid #aaa; // линия снизу
+            color: #666;
+            font-size: 18px;
+            padding: 0 0 3px;
+            width: 100%;
+            transition: border-color .2s; // добавил анимацию для цвета границы
+
+            &:focus {
+              border-color: #28e98c;
+              outline: none;
+            }
+
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+
+          textarea {
+            min-height: 120px;
+            resize: vertical;
+          }
         }
-      }
     }
-
   }
-
 }
+

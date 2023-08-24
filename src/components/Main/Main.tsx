@@ -1,5 +1,9 @@
 import React from 'react';
 import s from "./Main.module.scss";
+import btn from '../../common/components/Button/Button.module.scss'
+
+
+import imgFake from '../../images/round-text.png';
 
 const Main = () => {
     return (
@@ -10,6 +14,11 @@ const Main = () => {
                 <span className={s.portfolioAnimation}>
                             scroll-animation to my projects
                         </span>
+
+                <div className={s.circleContainer}>
+                    <img className={s.rotatingText} src={imgFake} alt="Rounded Text"/>
+                    {/*<i className={s.lasLaArrowDown}></i>*/}
+                </div>
 
             </section>
             <section className={s.about}>
@@ -124,7 +133,7 @@ const Main = () => {
                     </div>
 
                     <div className={s.inputGroup}>
-                        <button className="" name="submit" type="submit" id="submit-form">send
+                        <button className={btn.themeBtn} name="submit" type="submit" id="submit-form">send
                             message
                         </button>
                     </div>

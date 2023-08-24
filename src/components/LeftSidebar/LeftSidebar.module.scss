@@ -38,3 +38,26 @@
 
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .leftSidebar {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  //.leftSidebarContainer {
+  //  display: none;
+  //  position: static;
+
+    .leftSidebar {
+      position: static;
+      max-width: 767px;
+      margin: 0 auto;
+
+      button {
+        width: 100%;
+      }
+    }
+  //}
+}

@@ -1,39 +1,24 @@
 @use './styles/mixins' as m;
 @use './styles/placeholders';
-@use './styles/variables' as h;
-@use './styles/variables' as w;
+//@use './styles/variables' as s;
 
 .app {
   display: flex;
   justify-content: flex-end;
-  margin-right: 100px;
+  //margin-right: 100px;
+  height: 100vh;
 
-  @media screen and (max-width: 1400px) {
-    .leftSidebar {
-      padding: 20px;
-    }
-  }
 
 }
 
 @media screen and (max-width: 1200px) {
   .app {
     flex-direction: column;
-    margin: 0;
-
-    .leftSidebarContainer {
-      position: static;
-
-      .leftSidebar {
-        position: static;
-        max-width: 767px;
-        margin: 0 auto;
-
-        button {
-          width: 100%;
-        }
-      }
-    }
+    //margin: 0;
+    //min-height: 40%;
+    //align-items: center; // Если хотите, чтобы элементы были выровнены по центру при вертикальном расположении
+    justify-content: normal; // Сбросить выравнивание для вертикального расположения
+    //margin-right: 0;
   }
 }
 

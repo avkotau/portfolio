@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './LeftSidebar.module.scss'
+import { Button } from "../../../src/common/components/Button/Button";
+
 
 const LeftSidebar = () => {
     return (
@@ -16,7 +18,7 @@ const LeftSidebar = () => {
                 <li>discord</li>
                 <li>twitter</li>
             </ul>
-            <button>button</button>
+            <Button text={'hear me!'}/>
         </div>
     );
 };
