@@ -3,7 +3,7 @@ import s from './LeftSidebar.module.scss'
 import { Button } from "../../../src/common/components/Button/Button";
 
 
-const LeftSidebar = () => {
+export const LeftSidebar = () => {
     return (
         <div className={s.leftSidebar}>
             <span>name</span>
@@ -23,7 +23,6 @@ const LeftSidebar = () => {
     );
 };
 
-export default LeftSidebar;
 
 
 

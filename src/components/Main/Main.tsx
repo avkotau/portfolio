@@ -1,11 +1,9 @@
 import React from 'react';
 import s from "./Main.module.scss";
 import btn from '../../common/components/Button/Button.module.scss'
-
-
 import imgFake from '../../images/round-text.png';
 
-const Main = () => {
+export const Main = () => {
     return (
         <div className={s.main}>
 
@@ -140,9 +138,6 @@ const Main = () => {
 
                 </form>
             </section>
-
         </div>
     );
 };
-
-export default Main;
