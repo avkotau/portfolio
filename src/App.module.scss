@@ -1,5 +1,5 @@
-@use './styles/mixins' as m;
-@use './styles/placeholders';
+@use "common/styles/mixins" as m;
+@use "common/styles/placeholders";
 
 .app {
   display: flex;
@@ -16,9 +16,7 @@
 }
 
 @media screen and (max-width: 992px) {
-
 }
 
 @media screen and (max-width: 767px) {
-
 }

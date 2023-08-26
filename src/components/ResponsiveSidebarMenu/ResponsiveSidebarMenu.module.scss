@@ -1,20 +1,23 @@
+@use "src/common/styles/mixins" as m;
+@use "src/common/styles/variables" as s;
+
 //dimming to the left of the open menu
 .background {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  background: #565656;
+  background: #575757;
   opacity: 0.3;
 }
 
 .iconMenu {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 15px;
   background-color: #1f1f1f;
   color: white;
-  border: none;
+  border: 1px solid #575757;
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -36,27 +39,43 @@
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: #f9f9f9;
-  //box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  background: #1f1f1f;
   transition: right 0.3s ease-in-out;
   z-index: 3;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
+  .menuWrap {
+    margin: 60px 40px 0 40px;
 
+    ul {
+      list-style-type: none;
+      padding: 0;
 
+      li {
+        padding: 10px 0;
+        border-bottom: 1px solid #e6e6e6;
 
-    li {
-      padding: 15px;
-      border-bottom: 1px solid #e6e6e6;
+        &:hover {
+          cursor: pointer;
+          transition: 0.3s;
+          color: #e6e6e6;
 
-      &:hover {
-        background: #e6e6e6;
+          svg {
+            color: s.$BtnColor;
+          }
+        }
+
+        //a {
+        //display: flex;
+        //align-items: center;
+        //}
+
+        span {
+          position: absolute;
+          padding-left: 5px;
+        }
       }
     }
   }
-
 }
 
 .open {

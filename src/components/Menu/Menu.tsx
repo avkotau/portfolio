@@ -1,16 +1,11 @@
-import React from 'react';
+import React from "react";
 import s from "./Menu.module.scss";
+import { MenuContent } from "../../common/components/Menu/MenuContent";
 
 export const Menu = () => {
-    return (
-        <ul className={s.menu}>
-            <li>Home</li>
-            <li>About</li>
-            <li>resume</li>
-            <li>skills</li>
-            <li>portfolio</li>
-            <li>contact</li>
-        </ul>
-    );
+  return (
+    <div className={s.menu}>
+      <MenuContent />
+    </div>
+  );
 };
-

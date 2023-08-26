@@ -1,4 +1,4 @@
-@use '../../../styles/variables' as s;
+@use "src/common/styles/variables" as s;
 
 .themeBtn {
   align-items: center;
@@ -13,17 +13,17 @@
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  transition: .3s;
+  transition: 0.3s;
   overflow: hidden;
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: s.$BtnColor;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &::before {

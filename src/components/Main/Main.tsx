@@ -1,143 +1,238 @@
-import React from 'react';
+import React from "react";
 import s from "./Main.module.scss";
-import btn from '../../common/components/Button/Button.module.scss'
-import imgFake from '../../images/round-text.png';
+import btn from "../../common/components/Button/Button.module.scss";
+import imgFake from "../../assets/images/round-text.png";
+import { Link } from "react-scroll";
+import {
+  BsArrowDown,
+  BsBootstrap,
+  BsFiletypeCss,
+  BsFiletypeScss,
+} from "react-icons/bs";
+import { GrGraphQl, GrReactjs } from "react-icons/gr";
+import {
+  SiApollographql,
+  SiAxios,
+  SiMaterialdesign,
+  SiReactquery,
+  SiRedux,
+  SiReduxsaga,
+  SiSocketdotio,
+  SiStorybook,
+  SiTestcafe,
+  SiTypescript,
+} from "react-icons/si";
+import { TbBrandJavascript, TbJson } from "react-icons/tb";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { LuFormInput } from "react-icons/lu";
 
 export const Main = () => {
-    return (
-        <div className={s.main}>
-
-            <section className={s.hero}>
-                <h1 className={s.title}>Hello my name is Alex I'm Frontend Developer</h1>
-                <span className={s.portfolioAnimation}>
-                            scroll-animation to my projects
-                        </span>
-
-                <div className={s.circleContainer}>
-                    <img className={s.rotatingText} src={imgFake} alt="Rounded Text"/>
-                    {/*<i className={s.lasLaArrowDown}></i>*/}
-                </div>
-
-            </section>
-            <section className={s.about}>
-                <div className={s.wrapContent}>
-                    <h3 className={s.title}>about me title</h3>
-                    <p className={s.text}>Идейные соображения высшего порядка, а также сплочённость команды
-                        профессионалов говорит о возможностях соответствующих условий активизации. Каждый из нас
-                        понимает очевидную вещь: экономическая повестка сегодняшнего дня напрямую зависит от новых
-                        принципов формирования материально-технической и кадровой базы. И нет сомнений, что
-                        независимые государства заблокированы в рамках своих собственных рациональных ограничений.
-                        Есть над чем задуматься: ключевые особенности структуры проекта набирают популярность среди
-                        определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям.
-                        Ясность нашей позиции очевидна: высококачественный прототип будущего проекта обеспечивает
-                        широкому кругу (специалистов) участие в формировании приоретизации разума над эмоциями.
-                    </p>
-                </div>
-            </section>
-            <section className={s.resume}>
-                <h3 className={s.title}>Education & Experience</h3>
-                <div className={s.educationWork}>education Work information</div>
-                {/*    create table tag with content*/}
-            </section>
-            <section className={s.skills}>
-
-                <h3 className={s.title}>My Advantages</h3>
-                <div className={s.skills}>
-                    <div className={s.item}>
-                        <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                        <span>React</span>
-
-                    </div>
-                    <div className={s.item}>
-                        <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                        <span>ts</span>
-
-                    </div>
-                    <div className={s.item}>
-                        <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                        <span>html</span>
-
-                    </div>
-                    <div className={s.item}>
-                        <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                        <span>ccs</span>
-
-                    </div>
-                    <div className={s.item}>
-                        <img src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg" alt=""/>
-                        <span>js</span>
-
-                    </div>
-                </div>
-
-            </section>
-            <section className={s.portfolio}>
-
-                <h3 className={s.title}>Featured Projects</h3>
-                <figure>
-                    <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-                        <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
-                             alt=""/>
-                    </a>
-                    <figcaption>
-                        <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-                            name project
-                        </a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-                        <img src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
-                             alt=""/>
-                    </a>
-                    <figcaption>
-                        <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-                            name project
-                        </a>
-                    </figcaption>
-                </figure>
-
-            </section>
-            <section className={s.contact}>
-
-                <h3 className={s.title}>Contact</h3>
-
-                <form className={s.form} method="" action="">
-
-                    <div className={s.inputGroup}>
-                        <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name"
-                               placeholder="Your name"/>
-                    </div>
-
-                    <div className={s.inputGroup}>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your email adress"/>
-                    </div>
-
-                    <div className={s.inputGroup}>
-                        <label htmlFor="phone-number">phone <span>(optional)</span></label>
-                        <input
-                            type="tel" name="phone-number" id="phone-number"
-                            placeholder="Your number phone"
-                        />
-                    </div>
-
-                    <div className={s.inputGroup}>
-                        <label htmlFor="message">message</label>
-                        <textarea
-                            name="message" id="message" placeholder="Wrire your message here ...">
-                                    </textarea>
-                    </div>
-
-                    <div className={s.inputGroup}>
-                        <button className={btn.themeBtn} name="submit" type="submit" id="submit-form">send
-                            message
-                        </button>
-                    </div>
-
-                </form>
-            </section>
+  return (
+    <div className={s.main}>
+      <section className={s.hero} id="home">
+        <h1 className={s.title}>
+          Hello my name is Alex I'm Frontend Developer
+        </h1>
+        <span className={s.portfolioAnimation}>
+          scroll-animation to my projects
+        </span>
+        <div className={s.circleContainer}>
+          <Link to="portfolio" spy={true} smooth={true} duration={500}>
+            <img className={s.rotatingText} src={imgFake} alt="Rounded Text" />
+            {/*array down*/}
+            <BsArrowDown className={s.arrowDown} />
+          </Link>
         </div>
-    );
+      </section>
+      <section className={s.about} id="about">
+        <div className={s.wrapContent}>
+          <h3 className={s.title}>about me title</h3>
+          <p className={s.text}>
+            Идейные соображения высшего порядка, а также сплочённость команды
+            профессионалов говорит о возможностях соответствующих условий
+            активизации. Каждый из нас понимает очевидную вещь: экономическая
+            повестка сегодняшнего дня напрямую зависит от новых принципов
+            формирования материально-технической и кадровой базы. И нет
+            сомнений, что независимые государства заблокированы в рамках своих
+            собственных рациональных ограничений. Есть над чем задуматься:
+            ключевые особенности структуры проекта набирают популярность среди
+            определенных слоев населения, а значит, должны быть ассоциативно
+            распределены по отраслям. Ясность нашей позиции очевидна:
+            высококачественный прототип будущего проекта обеспечивает широкому
+            кругу (специалистов) участие в формировании приоретизации разума над
+            эмоциями.
+          </p>
+        </div>
+      </section>
+      <section className={s.resume} id="resume">
+        <h3 className={s.title}>Education & Experience</h3>
+        <div className={s.educationWork}>education Work information</div>
+        {/*    create table tag with content*/}
+      </section>
+      <section className={s.skills} id="skills">
+        <h3 className={s.title}>My Advantages</h3>
+        <div className={s.skills}>
+          <div className={s.item}>
+            <GrReactjs style={{ color: "turquoise", fontSize: "60px" }} />
+            <SiTypescript style={{ color: "yellow", fontSize: "60px" }} />
+            <TbBrandJavascript style={{ color: "green", fontSize: "60px" }} />
+            <AiOutlineHtml5 style={{ color: "orange", fontSize: "60px" }} />
+            <BsFiletypeCss style={{ color: "lightblue", fontSize: "60px" }} />
+            <BsFiletypeScss style={{ color: "hotpink", fontSize: "60px" }} />
+            <BsBootstrap style={{ color: "mediumpurple", fontSize: "60px" }} />
+            <TbJson style={{ color: "red", fontSize: "60px" }} />
+            <SiAxios style={{ color: "rgb(90, 41, 228)", fontSize: "60px" }} />
+            <div>REST API</div>
+            <div>
+              <LuFormInput />
+              formik
+            </div>
+            <SiRedux />
+            redux/redux-toolkit
+            <div>
+              <SiReduxsaga />
+              redux saga
+            </div>
+            <div>
+              <SiTestcafe />
+              Unit tests
+            </div>
+            <div>
+              <SiSocketdotio />
+              WebSocket
+            </div>
+            <div>
+              <SiReactquery />
+              React-Query
+            </div>
+            <div>
+              <SiApollographql />
+              Apollo
+            </div>
+            <div>
+              <GrGraphQl />
+              GraphQl
+            </div>
+            <div>
+              <SiMaterialdesign />
+              Material UI
+            </div>
+            <SiStorybook
+              style={{ color: "rgb(255,100,66)", fontSize: "60px" }}
+            />
+            <img
+              src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg"
+              alt=""
+            />
+            <span>React</span>
+          </div>
+          <div className={s.item}>
+            <img
+              src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg"
+              alt=""
+            />
+            <span>ts</span>
+          </div>
+          <div className={s.item}>
+            <img
+              src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg"
+              alt=""
+            />
+            <span>html</span>
+          </div>
+          <div className={s.item}>
+            <img
+              src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg"
+              alt=""
+            />
+            <span>ccs</span>
+          </div>
+          <div className={s.item}>
+            <img
+              src="https://icon-library.com/images/50x50-icon/50x50-icon-0.jpg"
+              alt=""
+            />
+            <span>js</span>
+          </div>
+        </div>
+      </section>
+      <section className={s.portfolio} id="portfolio">
+        <h3 className={s.title}>Featured Projects</h3>
+        <figure>
+          <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+            <img
+              src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+              alt=""
+            />
+          </a>
+          <figcaption>
+            <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+              name project
+            </a>
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+            <img
+              src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+              alt=""
+            />
+          </a>
+          <figcaption>
+            <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+              name project
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+      <section className={s.contact} id="contact">
+        <h3 className={s.title}>Contact</h3>
+        <form className={s.form} method="" action="">
+          <div className={s.inputGroup}>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" />
+          </div>
+          <div className={s.inputGroup}>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email adress"
+            />
+          </div>
+
+          <div className={s.inputGroup}>
+            <label htmlFor="phone-number">
+              phone <span>(optional)</span>
+            </label>
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              placeholder="Your number phone"
+            />
+          </div>
+          <div className={s.inputGroup}>
+            <label htmlFor="message">message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Wrire your message here ..."
+            ></textarea>
+          </div>
+          <div className={s.inputGroup}>
+            <button
+              className={btn.themeBtn}
+              name="submit"
+              type="submit"
+              id="submit-form"
+            >
+              send message
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  );
 };

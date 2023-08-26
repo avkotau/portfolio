@@ -1,5 +1,5 @@
-@use '../../styles/mixins' as a;
-@use '../../styles/placeholders';
+@use "src/common/styles/mixins" as a;
+@use "src/common/styles/placeholders";
 
 .leftSidebar {
   flex: 0.3;
@@ -7,7 +7,7 @@
 
   //background-color: rosybrown;
   padding: 50px;
-  @include a.displayFlexCenter(flex, center, center);
+  @include a.flex(center, center);
   flex-direction: column;
   gap: 20px;
   top: 120px;
@@ -35,7 +35,6 @@
   button {
     @extend %buttonStyle;
     width: 300px;
-
   }
 }
 
@@ -50,14 +49,14 @@
   //  display: none;
   //  position: static;
 
-    .leftSidebar {
-      position: static;
-      max-width: 767px;
-      margin: 0 auto;
+  .leftSidebar {
+    position: static;
+    max-width: 767px;
+    margin: 0 auto;
 
-      button {
-        width: 100%;
-      }
+    button {
+      width: 100%;
     }
+  }
   //}
 }

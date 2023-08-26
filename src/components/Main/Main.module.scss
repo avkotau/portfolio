@@ -1,7 +1,6 @@
-@use "../../styles/mixins" as m;
-@use '../../styles/variables' as s;
-@use '../../styles/placeholders';
-
+@use "src/common/styles/mixins" as m;
+@use "src/common/styles/variables" as s;
+@use "src/common/styles/placeholders";
 
 .main {
   //background-color: bisque;
@@ -11,11 +10,25 @@
   .circleContainer {
     margin-left: auto;
     margin-right: 30px;
+    position: relative;
 
-    .rotatingText {
-      //width: 100%;
-      animation: spin 10s linear infinite;
-    }
+
+      .rotatingText {
+        animation: spin 10s linear infinite;
+      }
+
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
 
     //.lasLaArrowDown {
     //  color: #fff;
@@ -30,9 +43,8 @@
     }
   }
 
-
   .hero {
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     @extend %flColumn;
     min-height: s.$minHg;
@@ -43,7 +55,7 @@
     }
 
     .portfolioAnimation {
-      @include m.displayFlexCenter(flex, center, center);
+      @include m.flex(center, center);
       //background-color: wheat;
     }
   }
@@ -51,7 +63,7 @@
   .about {
     //background-color: gray;
     min-height: s.$minHg;
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     @extend %flColumn;
 
@@ -64,7 +76,7 @@
       }
 
       .text {
-        @include m.displayFlexCenter(flex, center, center);
+        @include m.flex(center, center);
         //background-color: rosybrown;
       }
     }
@@ -73,26 +85,26 @@
   .resume {
     //background-color: hotpink;
     min-height: s.$minHg;
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     @extend %flColumn;
 
     .title {
-      //@include m.displayFlexCenter(flex, center, center);
+      //@include m.flex(flex, center, center);
       @extend %titleStyle;
       //background-color: honeydew;
     }
 
     .educationWork {
       //background-color: tan;
-      @include m.displayFlexCenter(flex, center, center);
+      @include m.flex(center, center);
     }
   }
 
   .skills {
     //background-color: darkcyan;
     min-height: s.$minHg;
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     flex-direction: column;
 
@@ -103,7 +115,7 @@
 
     .skills {
       //background-color: darkcyan;
-      @include m.displayFlexCenter(flex, center, center);
+      @include m.flex(center, center);
       flex-direction: row;
       //min-height: h.$minHg;
       gap: 30px;
@@ -111,7 +123,7 @@
 
       .item {
         //background-color: darkgray;
-        @include m.displayFlexCenter(flex, center, center);
+        @include m.flex(center, center);
         flex-direction: column;
         padding: 20px;
 
@@ -126,7 +138,7 @@
 
   .portfolio {
     //background-color: aquamarine;
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     flex-direction: column;
     min-height: s.$minHg;
@@ -153,7 +165,7 @@
   .contact {
     //background-color: darkgray;
     min-height: s.$minHg;
-    @include m.displayFlexCenter(flex, center, center);
+    @include m.flex(center, center);
     @extend %tplborder;
     flex-direction: column;
 
@@ -163,53 +175,53 @@
     }
 
     .form {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
 
-        .inputGroup {
-          flex: 0 0 50%; // делает каждую группу ввода занимать половину ширины формы (2 группы в ряд)
-          padding: 0 15px; // добавил небольшие отступы между группами
-          margin-bottom: 20px;
+      .inputGroup {
+        flex: 0 0 50%; // делает каждую группу ввода занимать половину ширины формы (2 группы в ряд)
+        padding: 0 15px; // добавил небольшие отступы между группами
+        margin-bottom: 20px;
 
-          label {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 16px;
+        label {
+          display: block;
+          margin-bottom: 10px;
+          color: #333;
+          font-size: 16px;
 
-            span {
-              font-weight: normal;
-              color: #999;
-            }
-          }
-
-          input, textarea {
-            background: none;
-            border: none;
-            border-bottom: 2px solid #aaa; // линия снизу
-            color: #666;
-            font-size: 18px;
-            padding: 0 0 3px;
-            width: 100%;
-            transition: border-color .2s; // добавил анимацию для цвета границы
-
-            &:focus {
-              border-color: #28e98c;
-              outline: none;
-            }
-
-            &::placeholder {
-              color: #aaa;
-            }
-          }
-
-          textarea {
-            min-height: 120px;
-            resize: vertical;
+          span {
+            font-weight: normal;
+            color: #999;
           }
         }
+
+        input,
+        textarea {
+          background: none;
+          border: none;
+          border-bottom: 2px solid #aaa; // линия снизу
+          color: #666;
+          font-size: 18px;
+          padding: 0 0 3px;
+          width: 100%;
+          transition: border-color 0.2s; // добавил анимацию для цвета границы
+
+          &:focus {
+            border-color: #28e98c;
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+
+        textarea {
+          min-height: 120px;
+          resize: vertical;
+        }
+      }
     }
   }
 }
-
