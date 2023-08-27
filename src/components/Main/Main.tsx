@@ -6,11 +6,13 @@ import { Link } from "react-scroll";
 import reduxSaga from "assets/images/skills/Redux-Saga-Logo.png";
 import formik from "assets/images/skills/formik.png";
 import restApi from "assets/images/skills/restApi.png";
+
 import {
   BsArrowDown,
   BsBootstrap,
   BsFiletypeCss,
   BsFiletypeScss,
+  BsGithub,
 } from "react-icons/bs";
 import { GrGraphQl, GrReactjs } from "react-icons/gr";
 import {
@@ -26,45 +28,92 @@ import {
 } from "react-icons/si";
 import { TbBrandJavascript, TbJson } from "react-icons/tb";
 import { AiOutlineHtml5 } from "react-icons/ai";
+import ReactTypingEffect from "react-typing-effect";
+
+const Fade = require("react-reveal/Fade");
 
 export const Main = () => {
   return (
     <div className={s.main}>
       <section className={s.hero} id="home">
         <h1 className={s.title}>
-          Hello my name is Alex I'm Frontend Developer
+          Kotov Alexander
+          <br />
+          <ReactTypingEffect
+            className={s.typingEffect}
+            text={["Frontend Developer"]}
+            speed={100}
+            eraseSpeed={100}
+          />
         </h1>
-        <div className={s.circleContainer}>
-          <Link to="portfolio" spy={true} smooth={true} duration={500}>
-            <img className={s.rotatingText} src={imgFake} alt="Rounded Text" />
-            <BsArrowDown className={s.arrowDown} />
-          </Link>
-        </div>
+        <Fade right>
+          <div className={s.circleContainer}>
+            <Link to="portfolio" spy={true} smooth={true} duration={500}>
+              <img
+                className={s.rotatingText}
+                src={imgFake}
+                alt="Rounded Text"
+              />
+              <BsArrowDown />
+            </Link>
+          </div>
+        </Fade>
       </section>
       <section className={s.about} id="about">
         <div className={s.wrapContent}>
-          <h3 className={s.title}>about me title</h3>
+          <h3 className={s.title}>About me</h3>
           <p className={s.text}>
-            Идейные соображения высшего порядка, а также сплочённость команды
-            профессионалов говорит о возможностях соответствующих условий
-            активизации. Каждый из нас понимает очевидную вещь: экономическая
-            повестка сегодняшнего дня напрямую зависит от новых принципов
-            формирования материально-технической и кадровой базы. И нет
-            сомнений, что независимые государства заблокированы в рамках своих
-            собственных рациональных ограничений. Есть над чем задуматься:
-            ключевые особенности структуры проекта набирают популярность среди
-            определенных слоев населения, а значит, должны быть ассоциативно
-            распределены по отраслям. Ясность нашей позиции очевидна:
-            высококачественный прототип будущего проекта обеспечивает широкому
-            кругу (специалистов) участие в формировании приоретизации разума над
-            эмоциями.
+            Hello! I'm a frontend developer with a deep understanding of modern
+            technologies and web development standards. My experience
+            encompasses creating SPAs using React, Redux, TypeScript, along with
+            profound knowledge in SCSS, HTML, and JavaScript. I'm committed to
+            continuous improvement and learning new tools to craft efficient and
+            innovative solutions. Teamwork is more than just a word to me: I
+            firmly believe that collaboration and knowledge sharing are keys to
+            achieving outstanding results. Currently, I'm seeking opportunities
+            to apply my skills in a team that sets ambitious goals and values
+            quality. I'm open to both project-based work and full-time
+            employment. Let's create something amazing together!
           </p>
         </div>
       </section>
       <section className={s.resume} id="resume">
         <h3 className={s.title}>Education & Experience</h3>
-        <div className={s.educationWork}>education Work information</div>
-        {/*    create table tag with content*/}
+        <div className={s.educationWork}>
+          <div>
+            <span>2020 - Present</span>
+            <h2>Logistician</h2>
+            <p>Viessmann</p>
+          </div>
+
+          <div>
+            <span>2016 - 2020</span>
+            <h2>Estimation Engineer</h2>
+            <p>State Utility Enterprise 'Housing Maintenance'</p>
+          </div>
+
+          <div>
+            <span>2021</span>
+            <h2>Learning English to the level pre-intermediate</h2>
+            <p>Don't Speak school</p>
+          </div>
+
+          <div>
+            <span>
+              {/*05/*/}2019 - {/*01/*/}2020
+            </span>
+            <h2>Website development with html, css & javascript</h2>
+            <p>IT-Academy</p>
+          </div>
+
+          <div>
+            <span>
+              {/*09/*/}2012 - {/*02/*/}2019
+            </span>
+            <h2>Bachelor Degree in Mechanical Engineering Technology</h2>
+            <p>Vitebsk State Technological University(VSTU)</p>
+          </div>
+        </div>
       </section>
       <section className={s.skills} id="skills">
         <h3 className={s.title}>My Advantages</h3>
@@ -163,36 +212,44 @@ export const Main = () => {
             />
             <span>Storybook</span>
           </div>
+          <div className={s.item}>
+            <BsGithub style={{ color: "darkgrey", fontSize: "60px" }} />
+            <span>Github</span>
+          </div>
         </div>
       </section>
       <section className={s.portfolio} id="portfolio">
         <h3 className={s.title}>Featured Projects</h3>
-        <figure>
-          <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-            <img
-              src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
-              alt=""
-            />
-          </a>
-          <figcaption>
+        <Fade left>
+          <figure>
             <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-              name project
+              <img
+                src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+                alt=""
+              />
             </a>
-          </figcaption>
-        </figure>
-        <figure>
-          <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-            <img
-              src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
-              alt=""
-            />
-          </a>
-          <figcaption>
+            <figcaption>
+              <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                name project
+              </a>
+            </figcaption>
+          </figure>
+        </Fade>
+        <Fade right>
+          <figure>
             <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
-              name project
+              <img
+                src="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif"
+                alt=""
+              />
             </a>
-          </figcaption>
-        </figure>
+            <figcaption>
+              <a href="https://hrautoglass.com/wp-content/themes/eshg/images/placeholder/700x400.gif">
+                name project
+              </a>
+            </figcaption>
+          </figure>
+        </Fade>
       </section>
       <section className={s.contact} id="contact">
         <h3 className={s.title}>Contact</h3>

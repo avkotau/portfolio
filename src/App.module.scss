@@ -4,11 +4,16 @@
 .app {
   display: flex;
   justify-content: flex-end;
-  //margin-right: 100px;
-  height: 100vh;
+  margin-right: 300px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1800px) {
+  .app {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1250px) {
   .app {
     flex-direction: column;
     justify-content: normal; // reset alignment for vertical layout

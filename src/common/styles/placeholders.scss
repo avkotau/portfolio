@@ -1,3 +1,5 @@
+@use "src/common/styles/variables" as s;
+
 //style border
 %tplborder {
   border: 1px solid;
@@ -11,6 +13,7 @@
   font-size: 36px;
   margin: 0 0 30px 0;
   text-align: center;
+  color: s.$textColor
 }
 
 %buttonStyle {

@@ -3,8 +3,8 @@
 
 .leftSidebar {
   flex: 0.3;
-  left: 0;
-  padding: 50px;
+  left: 2%;
+  padding: 40px;
   @include a.flex(center, center);
   flex-direction: column;
   gap: 20px;
@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .leftSidebar {
     position: static;
     width: 79%;
