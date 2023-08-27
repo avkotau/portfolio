@@ -4,15 +4,12 @@
 .leftSidebar {
   flex: 0.3;
   left: 0;
-
-  //background-color: rosybrown;
   padding: 50px;
   @include a.flex(center, center);
   flex-direction: column;
   gap: 20px;
   top: 120px;
   position: fixed;
-  //width: 20%;
   min-width: 300px;
   border: 1px solid #565656;
   border-radius: 30px;
@@ -28,7 +25,6 @@
     li {
       padding: 5px;
       margin: 5px;
-      //background-color: aqua;
     }
   }
 
@@ -45,18 +41,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  //.leftSidebarContainer {
-  //  display: none;
-  //  position: static;
-
   .leftSidebar {
     position: static;
-    max-width: 767px;
+    width: 79%;
     margin: 0 auto;
 
-    button {
-      width: 100%;
+    a {
+      width: 90%;
     }
   }
-  //}
 }

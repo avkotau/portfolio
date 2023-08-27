@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import s from "./ResponsiveSidebarMenu.module.scss";
-import { MenuContent } from "../../common/components/Menu/MenuContent";
+import { MenuContent } from "common/components/Menu/MenuContent";
 
 export const ResponsiveSidebarMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = (e: any) => {
+  const toggleMenu = () => {
     if (menuOpen) {
       setMenuOpen(false);
     }

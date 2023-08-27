@@ -3,7 +3,6 @@
 @use "src/common/styles/placeholders";
 
 .main {
-  //background-color: bisque;
   flex: 0.7;
   @extend %tplborder;
 
@@ -12,30 +11,22 @@
     margin-right: 30px;
     position: relative;
 
+    .rotatingText {
+      animation: spin 10s linear infinite;
+    }
 
-      .rotatingText {
-        animation: spin 10s linear infinite;
-      }
+    svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-      svg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 40px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-
-    //.lasLaArrowDown {
-    //  color: #fff;
-    //  display: block;
-    //  font-size: 40px;
-    //  position: absolute;
-    //}
     @keyframes spin {
       100% {
         transform: rotate(360deg);
@@ -51,17 +42,10 @@
 
     .title {
       @extend %titleStyle;
-      //background-color: honeydew;
-    }
-
-    .portfolioAnimation {
-      @include m.flex(center, center);
-      //background-color: wheat;
     }
   }
 
   .about {
-    //background-color: gray;
     min-height: s.$minHg;
     @include m.flex(center, center);
     @extend %tplborder;
@@ -72,37 +56,30 @@
 
       .title {
         @extend %titleStyle;
-        //background-color: honeydew;
       }
 
       .text {
         @include m.flex(center, center);
-        //background-color: rosybrown;
       }
     }
   }
 
   .resume {
-    //background-color: hotpink;
     min-height: s.$minHg;
     @include m.flex(center, center);
     @extend %tplborder;
     @extend %flColumn;
 
     .title {
-      //@include m.flex(flex, center, center);
       @extend %titleStyle;
-      //background-color: honeydew;
     }
 
     .educationWork {
-      //background-color: tan;
       @include m.flex(center, center);
     }
   }
 
   .skills {
-    //background-color: darkcyan;
     min-height: s.$minHg;
     @include m.flex(center, center);
     @extend %tplborder;
@@ -110,25 +87,20 @@
 
     .title {
       @extend %titleStyle;
-      //background-color: honeydew;
     }
 
     .skills {
-      //background-color: darkcyan;
       @include m.flex(center, center);
       flex-direction: row;
-      //min-height: h.$minHg;
       gap: 30px;
       flex-wrap: wrap;
 
       .item {
-        //background-color: darkgray;
         @include m.flex(center, center);
         flex-direction: column;
         padding: 20px;
 
         img {
-          //background-color: salmon;
           height: 50px;
           width: 50px;
         }
@@ -137,7 +109,6 @@
   }
 
   .portfolio {
-    //background-color: aquamarine;
     @include m.flex(center, center);
     @extend %tplborder;
     flex-direction: column;
@@ -145,7 +116,6 @@
 
     .title {
       @extend %titleStyle;
-      //background-color: honeydew;
     }
 
     figure {
@@ -163,7 +133,6 @@
   }
 
   .contact {
-    //background-color: darkgray;
     min-height: s.$minHg;
     @include m.flex(center, center);
     @extend %tplborder;
@@ -171,7 +140,6 @@
 
     .title {
       @extend %titleStyle;
-      //background-color: honeydew;
     }
 
     .form {
@@ -180,8 +148,8 @@
       margin: 20px;
 
       .inputGroup {
-        flex: 0 0 50%; // делает каждую группу ввода занимать половину ширины формы (2 группы в ряд)
-        padding: 0 15px; // добавил небольшие отступы между группами
+        flex: 0 0 50%; // makes each input group take up half the width of the form (2 groups in a row)
+        padding: 0 15px;
         margin-bottom: 20px;
 
         label {
@@ -200,12 +168,12 @@
         textarea {
           background: none;
           border: none;
-          border-bottom: 2px solid #aaa; // линия снизу
+          border-bottom: 2px solid #aaa;
           color: #666;
           font-size: 18px;
           padding: 0 0 3px;
           width: 100%;
-          transition: border-color 0.2s; // добавил анимацию для цвета границы
+          transition: border-color .5s; // animation for border color
 
           &:focus {
             border-color: #28e98c;
