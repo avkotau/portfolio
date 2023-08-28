@@ -13,13 +13,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
   <ul className={""}>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="home"
         className={"scrollTo"}
         to="home"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >
@@ -29,13 +30,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="about"
         className={"scrollTo"}
         to="about"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >
@@ -45,13 +47,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="resume"
         className={"scrollTo"}
         to="resume"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >
@@ -61,13 +64,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="skills"
         className={"scrollTo"}
         to="skills"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >
@@ -77,13 +81,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="portfolio"
         className={"scrollTo"}
         to="portfolio"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >
@@ -93,13 +98,14 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
+        style={{ fontSize: 20 }}
         activeClass="contact"
         className={"scrollTo"}
         to="contact"
         spy={true}
         smooth={true}
         ignoreCancelEvents={true}
-        offset={1}
+        offset={-200}
         duration={500}
         onClick={setMenuOpen ? () => setMenuOpen(false) : undefined}
       >

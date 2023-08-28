@@ -4,9 +4,8 @@
 
 .main {
   flex: 0.7;
-  @extend %tplborder;
   display: grid;
-  gap: 20px;
+  gap: 200px;
   padding: 200px 0;
 
   .circleContainer {
@@ -40,7 +39,6 @@
 
   .hero {
     @include m.flex(center, center);
-    @extend %tplborder;
     @extend %flColumn;
     padding-top: 70px;
 
@@ -55,7 +53,6 @@
 
   .about {
     @include m.flex(center, center);
-    @extend %tplborder;
     @extend %flColumn;
 
     .wrapContent {
@@ -73,7 +70,6 @@
 
   .resume {
     @include m.flex(center, center);
-    @extend %tplborder;
     @extend %flColumn;
 
     .title {
@@ -94,7 +90,6 @@
 
   .skills {
     @include m.flex(center, center);
-    @extend %tplborder;
     flex-direction: column;
 
     .title {
@@ -122,7 +117,6 @@
 
   .portfolio {
     @include m.flex(center, center);
-    @extend %tplborder;
     flex-direction: column;
 
     .title {
@@ -145,66 +139,10 @@
 
   .contact {
     @include m.flex(center, center);
-    @extend %tplborder;
     flex-direction: column;
 
     .title {
       @extend %titleStyle;
-    }
-
-    .form {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 20px;
-
-      .inputGroup {
-        flex: 0 0 50%; // makes each input group take up half the width of the form (2 groups in a row)
-        padding: 0 15px;
-        margin-bottom: 20px;
-
-        label {
-          display: block;
-          margin-bottom: 10px;
-
-          span {
-            font-weight: normal;
-          }
-        }
-
-        /* Remove highlight and set text color in Chrome and Safari */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus {
-          -webkit-text-fill-color: #777;
-          transition: background-color 5000s ease-in-out 0s;
-        }
-
-        input,
-        textarea {
-          background: none;
-          border: none;
-          border-bottom: 2px solid #aaa;
-          color: #777;
-          font-size: 18px;
-          padding: 0 0 3px;
-          width: 80%;
-          transition: border-color .5s; // animation for border color
-
-          &:focus {
-            border-color: #28e98c;
-            outline: none;
-          }
-
-          &::placeholder {
-            color: #aaa;
-          }
-        }
-
-        textarea {
-          min-height: 120px;
-          resize: vertical;
-        }
-      }
     }
   }
 }

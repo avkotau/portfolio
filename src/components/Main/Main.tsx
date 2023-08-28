@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./Main.module.scss";
-import btn from "common/components/Button/Button.module.scss";
 import imgFake from "assets/images/round-text.png";
 import { Link } from "react-scroll";
 import reduxSaga from "assets/images/skills/Redux-Saga-Logo.png";
@@ -29,7 +28,9 @@ import {
 import { TbBrandJavascript, TbJson } from "react-icons/tb";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import ReactTypingEffect from "react-typing-effect";
+import { Form } from "components/Form/Form";
 
+const Zoom = require("react-reveal/Zoom");
 const Fade = require("react-reveal/Fade");
 
 export const Main = () => {
@@ -46,7 +47,7 @@ export const Main = () => {
             eraseSpeed={100}
           />
         </h1>
-        <Fade right>
+        <Zoom top>
           <div className={s.circleContainer}>
             <Link to="portfolio" spy={true} smooth={true} duration={500}>
               <img
@@ -57,7 +58,7 @@ export const Main = () => {
               <BsArrowDown />
             </Link>
           </div>
-        </Fade>
+        </Zoom>
       </section>
       <section className={s.about} id="about">
         <div className={s.wrapContent}>
@@ -81,7 +82,13 @@ export const Main = () => {
         <h3 className={s.title}>Education & Experience</h3>
         <div className={s.educationWork}>
           <div>
-            <span>2020 - Present</span>
+            <span>2023 - Present</span>
+            <h2>Front-End Developer</h2>
+            <p>IT-INCUBATOR</p>
+          </div>
+
+          <div>
+            <span>2021 - Present</span>
             <h2>Logistician</h2>
             <p>Viessmann</p>
           </div>
@@ -253,51 +260,7 @@ export const Main = () => {
       </section>
       <section className={s.contact} id="contact">
         <h3 className={s.title}>Contact</h3>
-        <form className={s.form} method="" action="">
-          <div className={s.inputGroup}>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Your name" />
-          </div>
-          <div className={s.inputGroup}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your email adress"
-            />
-          </div>
-
-          <div className={s.inputGroup}>
-            <label htmlFor="phone-number">
-              phone <span>(optional)</span>
-            </label>
-            <input
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-              placeholder="Your number phone"
-            />
-          </div>
-          <div className={s.inputGroup}>
-            <label htmlFor="message">message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Wrire your message here ..."
-            ></textarea>
-          </div>
-          <div className={s.inputGroup}>
-            <button
-              className={btn.themeBtn}
-              name="submit"
-              type="submit"
-              id="submit-form"
-            >
-              send message
-            </button>
-          </div>
-        </form>
+        <Form />
       </section>
     </div>
   );
