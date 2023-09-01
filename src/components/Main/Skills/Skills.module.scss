@@ -1,0 +1,30 @@
+@use "src/common/styles/mixins" as m;
+@use "src/common/styles/variables" as s;
+@use "src/common/styles/placeholders";
+
+.skills {
+  @include m.flex(center, center);
+  flex-direction: column;
+
+  .title {
+    @extend %titleStyle;
+  }
+
+  .skills {
+    @include m.flex(center, center);
+    flex-direction: row;
+    //gap: 30px;
+    flex-wrap: wrap;
+
+    .item {
+      @include m.flex(center, center);
+      flex-direction: column;
+      padding: 40px;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}

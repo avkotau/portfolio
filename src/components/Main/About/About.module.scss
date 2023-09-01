@@ -1,0 +1,20 @@
+@use "src/common/styles/mixins" as m;
+@use "src/common/styles/variables" as s;
+@use "src/common/styles/placeholders";
+
+.about {
+  @include m.flex(center, center);
+  @extend %flColumn;
+
+  .wrapContent {
+    max-width: s.$maxW;
+
+    .title {
+      @extend %titleStyle;
+    }
+
+    .text {
+      @include m.flex(center, center);
+    }
+  }
+}

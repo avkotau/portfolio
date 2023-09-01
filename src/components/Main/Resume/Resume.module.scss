@@ -1,0 +1,23 @@
+@use "src/common/styles/mixins" as m;
+@use "src/common/styles/variables" as s;
+@use "src/common/styles/placeholders";
+
+.resume {
+  @include m.flex(center, center);
+  @extend %flColumn;
+
+  .title {
+    @extend %titleStyle;
+  }
+
+  > div {
+    //@include m.flex(start, start);
+    padding: 0 16%;
+    width: 100%;
+    max-width: 1200px;
+
+    div {
+      padding: 15px 0;
+    }
+  }
+}
