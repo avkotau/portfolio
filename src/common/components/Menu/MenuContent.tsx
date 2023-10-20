@@ -1,21 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineHome, AiOutlineProject, AiOutlineUser } from "react-icons/ai";
 import { PiBriefcase } from "react-icons/pi";
 import { BiBrain } from "react-icons/bi";
 import { LuContact } from "react-icons/lu";
+import s from "./MenuContent.module.scss";
 
-type MenuContentProps = {
+type Props = {
   setMenuOpen?: (value: boolean) => void;
 };
 
-export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
-  <ul className={""}>
+export const MenuContent: FC<Props> = ({ setMenuOpen }) => (
+  <ul>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="home"
-        className={"scrollTo"}
+        className={s.menu}
         to="home"
         spy={true}
         smooth={true}
@@ -30,9 +30,8 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="about"
-        className={"scrollTo"}
+        className={s.menu}
         to="about"
         spy={true}
         smooth={true}
@@ -47,9 +46,8 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="resume"
-        className={"scrollTo"}
+        className={s.menu}
         to="resume"
         spy={true}
         smooth={true}
@@ -64,9 +62,8 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="skills"
-        className={"scrollTo"}
+        className={s.menu}
         to="skills"
         spy={true}
         smooth={true}
@@ -81,9 +78,8 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="portfolio"
-        className={"scrollTo"}
+        className={s.menu}
         to="portfolio"
         spy={true}
         smooth={true}
@@ -98,9 +94,8 @@ export const MenuContent = ({ setMenuOpen }: MenuContentProps) => (
     </li>
     <li>
       <Link
-        style={{ fontSize: 20 }}
         activeClass="contact"
-        className={"scrollTo"}
+        className={s.menu}
         to="contact"
         spy={true}
         smooth={true}

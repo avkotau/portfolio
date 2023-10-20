@@ -29,100 +29,103 @@ export const Skills = () => (
     <h3 className={s.title}>My Advantages</h3>
     <div className={s.skills}>
       <div className={s.item}>
-        <GrReactjs style={{ color: "turquoise", fontSize: "60px" }} />
-        <span>React</span>
-      </div>
-      <div className={s.item}>
-        <SiTypescript style={{ color: "#3d5bff", fontSize: "60px" }} />
+        <SiTypescript className={`${s.iconSize} ${s.siTypescript}`} />
         <span>TypeScript</span>
       </div>
+
       <div className={s.item}>
-        <TbBrandJavascript style={{ color: "#ffe800", fontSize: "60px" }} />
-        <span>JavaScript</span>
+        <GrReactjs className={`${s.iconSize} ${s.srReactjs}`} />
+        <span>React</span>
       </div>
+
       <div className={s.item}>
-        <AiOutlineHtml5 style={{ color: "#ea641a", fontSize: "60px" }} />
-        <span>Html</span>
-      </div>
-      <div className={s.item}>
-        <BsFiletypeCss style={{ color: "lightblue", fontSize: "60px" }} />
-        <span>Css</span>
-      </div>
-      <div className={s.item}>
-        <BsFiletypeScss style={{ color: "hotpink", fontSize: "60px" }} />
-        <span>Scss</span>
-      </div>
-      <div className={s.item}>
-        <BsBootstrap style={{ color: "mediumpurple", fontSize: "60px" }} />
-        <span>Bootstrap</span>
-      </div>
-      {/*<div className={s.item}>*/}
-      {/*  <TbJson style={{ color: "red", fontSize: "60px" }} />*/}
-      {/*  <span>Json</span>*/}
-      {/*</div>*/}
-      <div className={s.item}>
-        <SiAxios style={{ color: "rgb(90, 41, 228)", fontSize: "60px" }} />
-        <span>Axios</span>
-      </div>
-      <div className={s.item}>
-        <img
-          src={restApi}
-          alt="Rest Api"
-          style={{ height: "60px", width: "95px" }}
-        />
-        <span>Rest Api</span>
-      </div>
-      <div className={s.item}>
-        <img
-          src={formik}
-          alt="Formik"
-          style={{ height: "60px", width: "60px" }}
-        />
-        <span>Formik</span>
-      </div>
-      <div className={s.item}>
-        <SiRedux style={{ color: "#764abc", fontSize: "60px" }} />
-        <span>Redux-Toolkit</span>
-      </div>
-      <div className={s.item}>
-        <img
-          src={reduxSaga}
-          alt="Redux Saga"
-          style={{ height: "60px", width: "95px" }}
-        />
-        <span>Redux-Saga</span>
-      </div>
-      <div className={s.item}>
-        <SiTestcafe style={{ color: "greenyellow", fontSize: "60px" }} />
-        <span>Unit tests</span>
-      </div>
-      <div className={s.item}>
-        <SiSocketdotio style={{ color: "white", fontSize: "60px" }} />
-        <span>WebSocket</span>
-      </div>
-      <div className={s.item}>
-        <SiReactquery style={{ color: "rgb(192,0,0)", fontSize: "60px" }} />
+        <SiReactquery className={`${s.iconSize} ${s.siReactquery}`} />
         <span>React-Query</span>
       </div>
+
       <div className={s.item}>
-        <SiApollographql style={{ color: "darkgrey", fontSize: "60px" }} />
-        <span>Apollo</span>
+        <SiRedux className={`${s.iconSize} ${s.siRedux}`} />
+        <span>Redux-Toolkit</span>
       </div>
+
       <div className={s.item}>
-        <GrGraphQl style={{ color: "#ef00a2", fontSize: "60px" }} />
-        <span>GraphQl</span>
+        <img src={reduxSaga} alt="Redux Saga" className={s.siReduxSaga} />
+        <span>Redux-Saga</span>
       </div>
+
       <div className={s.item}>
-        <SiMaterialdesign style={{ color: "#0e6fff", fontSize: "60px" }} />
-        <span>Material UI</span>
+        <TbBrandJavascript className={`${s.iconSize} ${s.tbBrandJavascript}`} />
+        <span>JavaScript</span>
       </div>
+
       <div className={s.item}>
-        <SiStorybook style={{ color: "rgb(255,100,66)", fontSize: "60px" }} />
+        <SiStorybook className={`${s.iconSize} ${s.siStorybook}`} />
         <span>Storybook</span>
       </div>
+
       <div className={s.item}>
-        <BsGithub style={{ color: "darkgrey", fontSize: "60px" }} />
+        <BsGithub className={`${s.iconSize} ${s.bsGithub}`} />
         <span>Github</span>
+      </div>
+
+      <div className={s.item}>
+        <img src={restApi} alt="Rest Api" className={s.restApi} />
+        <span>Rest Api</span>
+      </div>
+
+      <div className={s.item}>
+        <SiAxios className={`${s.iconSize} ${s.siAxios}`} />
+        <span>Axios</span>
+      </div>
+
+      <div className={s.item}>
+        <SiSocketdotio className={`${s.iconSize} ${s.siSocketdotio}`} />
+        <span>WebSocket</span>
+      </div>
+
+      <div className={s.item}>
+        <SiApollographql className={`${s.iconSize} ${s.siApollographql}`} />
+        <span>Apollo</span>
+      </div>
+
+      <div className={s.item}>
+        <GrGraphQl className={`${s.iconSize} ${s.grGraphQl}`} />
+        <span>GraphQl</span>
+      </div>
+
+      <div className={s.item}>
+        <AiOutlineHtml5 className={`${s.iconSize} ${s.aiOutlineHtml5}`} />
+        <span>Html</span>
+      </div>
+
+      <div className={s.item}>
+        <BsFiletypeCss className={`${s.iconSize} ${s.bsFiletypeCss}`} />
+        <span>Css</span>
+      </div>
+
+      <div className={s.item}>
+        <BsFiletypeScss className={`${s.iconSize} ${s.bsFiletypeScss}`} />
+        <span>Scss</span>
+      </div>
+
+      <div className={s.item}>
+        <BsBootstrap className={`${s.iconSize} ${s.bsBootstrap}`} />
+        <span>Bootstrap</span>
+      </div>
+
+      <div className={s.item}>
+        <img src={formik} alt="Formik" className={s.formik} />
+        <span>Formik</span>
+      </div>
+
+      <div className={s.item}>
+        <SiTestcafe className={`${s.iconSize} ${s.siTestcafe}`} />
+        <span>Unit tests</span>
+      </div>
+
+      <div className={s.item}>
+        <SiMaterialdesign className={`${s.iconSize} ${s.siMaterialdesign}`} />
+        <span>Material UI</span>
       </div>
     </div>
   </section>

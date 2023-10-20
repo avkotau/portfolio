@@ -26,7 +26,7 @@ export const LeftSidebar = () => {
     <div className={s.leftSidebar}>
       <span>Profile</span>
       <Tilt options={defaultOptions}>
-        <img style={{ width: "350px" }} src={fakeFace} alt="Me" />
+        <img src={fakeFace} alt="Me" />
       </Tilt>
       <span>kotau.alexander@gmail.com</span>
       <span>Poland, Republic of Poland</span>

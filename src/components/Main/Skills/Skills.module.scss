@@ -21,6 +21,31 @@
       flex-direction: column;
       padding: 40px;
 
+      .iconSize {
+        font-size: 60px;
+      }
+
+      .siTypescript { color: #3d5bff; }
+      .srReactjs { color: #40e0d0; }
+      .siReactquery { color: #C00000; }
+      .siRedux { color: #764abc; }
+      .siReduxSaga {height: 60px; width: 95px}
+      .tbBrandJavascript { color: #ffe800; }
+      .siStorybook { color: #FF6442; }
+      .bsGithub { color: #a9a9a9; }
+      .restApi {height: 60px; width: 95px}
+      .siAxios { color: #5A29E4; }
+      .siSocketdotio { color: #ffffff; }
+      .siApollographql { color: #a9a9a9; }
+      .grGraphQl { color: #ef00a2; }
+      .aiOutlineHtml5 { color: #ea641a; }
+      .bsFiletypeCss { color: #add8e6; }
+      .bsFiletypeScss { color: #ff69b4; }
+      .bsBootstrap { color: #9370db; }
+      .formik {height: 60px; width: 60px}
+      .siTestcafe { color: #adff2f; }
+      .siMaterialdesign { color: #0e6fff; }
+
       img {
         height: 50px;
         width: 50px;

@@ -1,7 +1,12 @@
 import s from "./Button.module.scss";
 import { Link } from "react-scroll";
+import { FC } from "react";
 
-export const Button = (props: { text: string }) => (
+type Props = {
+  text: string;
+};
+
+export const Button: FC<Props> = ({ text }) => (
   <Link
     activeClass="home"
     className={s.themeBtn}
@@ -12,6 +17,6 @@ export const Button = (props: { text: string }) => (
     offset={-200}
     duration={500}
   >
-    {props.text}
+    {text}
   </Link>
 );
