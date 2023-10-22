@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.51557e25.css",
-    "main.js": "/portfolio/static/js/main.ce9812ed.js",
+    "main.css": "/portfolio/static/css/main.3cacbc2a.css",
+    "main.js": "/portfolio/static/js/main.050d3afe.js",
     "static/js/496.eefed8e2.chunk.js": "/portfolio/static/js/496.eefed8e2.chunk.js",
+    "static/media/fakeFace.png": "/portfolio/static/media/fakeFace.423536915b868d134b76.png",
+    "static/media/Redux-Saga-Logo.png": "/portfolio/static/media/Redux-Saga-Logo.e14d04a5b1a11ac3db1b.png",
+    "static/media/formik.png": "/portfolio/static/media/formik.e3b185ef1f8371fcece0.png",
+    "static/media/restApi.png": "/portfolio/static/media/restApi.04e71d7f54f2fd259294.png",
+    "static/media/instagram.svg": "/portfolio/static/media/instagram.180efd2a79166bca1a9043072718c1a5.svg",
+    "static/media/whatsapp.svg": "/portfolio/static/media/whatsapp.3bab36b301431ec3aac6d6ef42e1818b.svg",
+    "static/media/discord.svg": "/portfolio/static/media/discord.1a0a6624f79fe744288718d6c9793005.svg",
+    "static/media/slack.svg": "/portfolio/static/media/slack.cd7110ce46ff9bc6a9457cdbbebd3813.svg",
+    "static/media/tg.svg": "/portfolio/static/media/tg.e87b47017060fa79514a1d041d9e7e48.svg",
     "index.html": "/portfolio/index.html",
-    "main.51557e25.css.map": "/portfolio/static/css/main.51557e25.css.map",
-    "main.ce9812ed.js.map": "/portfolio/static/js/main.ce9812ed.js.map",
+    "static/media/github.svg": "/portfolio/static/media/github.52e22f1f07e8f80ab5d6f12dfa145b70.svg",
+    "main.3cacbc2a.css.map": "/portfolio/static/css/main.3cacbc2a.css.map",
+    "main.050d3afe.js.map": "/portfolio/static/js/main.050d3afe.js.map",
     "496.eefed8e2.chunk.js.map": "/portfolio/static/js/496.eefed8e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51557e25.css",
-    "static/js/main.ce9812ed.js"
+    "static/css/main.3cacbc2a.css",
+    "static/js/main.050d3afe.js"
   ]
 }
