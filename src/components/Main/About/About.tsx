@@ -6,10 +6,11 @@ export const About = () => (
     <div className={s.wrapContent}>
       <h3 className={s.title}>About me</h3>
       <p className={s.text}>
-        Hello! I'm a frontend developer with a deep understanding of modern
-        technologies and web development standards. My experience encompasses
-        creating SPAs using React, Redux, TypeScript, along with profound
-        knowledge in SCSS, HTML, and JavaScript. I'm committed to continuous
+        Hello! I'm a frontend developer with experience creating SPAs using
+        React, Redux, TypeScript, along with profound knowledge in SCSS, HTML,
+        and JavaScript. I deep understanding of modern technologies and web
+        development standards. I possess knowledge in user interface design, as
+        well as testing and debugging processes. I'm committed to continuous
         improvement and learning new tools to craft efficient and innovative
         solutions. Teamwork is more than just a word to me: I firmly believe
         that collaboration and knowledge sharing are keys to achieving

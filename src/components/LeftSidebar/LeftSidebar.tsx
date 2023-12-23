@@ -7,7 +7,7 @@ import { ReactComponent as Whatsapp } from "assets/images/socialMedia/whatsapp.s
 import { ReactComponent as Discord } from "assets/images/socialMedia/discord.svg";
 import { ReactComponent as Slack } from "assets/images/socialMedia/slack.svg";
 import { ReactComponent as Github } from "assets/images/socialMedia/github.svg";
-import fakeFace from "assets/images/fakeFace.png";
+import ava from "assets/images/ava.png";
 import { Tilt } from "react-tilt";
 
 export const LeftSidebar = () => {
@@ -26,28 +26,64 @@ export const LeftSidebar = () => {
     <div className={s.leftSidebar}>
       <span>Profile</span>
       <Tilt options={defaultOptions}>
-        <img src={fakeFace} alt="Me" />
+        <img src={ava} alt="Me" />
       </Tilt>
       <span>kotau.alexander@gmail.com</span>
       <span>Poland, Republic of Poland</span>
       <ul>
         <li>
-          <Tg />
+          <a
+            href="https://t.me/alexanderkotau"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tg />
+          </a>
         </li>
         <li>
-          <Discord />
+          <a
+            href="https://discord.com/users/sir_alex1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Discord />
+          </a>
         </li>
         <li>
-          <Slack />
+          <a
+            href="https://slack.com/your_workspace"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Slack />
+          </a>
         </li>
         <li>
-          <Instagram />
+          <a
+            href="https://www.instagram.com/your_username/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram />
+          </a>
         </li>
         <li>
-          <Whatsapp />
+          <a
+            href="https://wa.me/yourphonenumber"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Whatsapp />
+          </a>
         </li>
         <li>
-          <Github />
+          <a
+            href="https://github.com/your_username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github />
+          </a>
         </li>
       </ul>
       <Button text={"hear me!"} />
