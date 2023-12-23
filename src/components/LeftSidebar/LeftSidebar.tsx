@@ -5,7 +5,6 @@ import { ReactComponent as Tg } from "assets/images/socialMedia/tg.svg";
 import { ReactComponent as Instagram } from "assets/images/socialMedia/instagram.svg";
 import { ReactComponent as Whatsapp } from "assets/images/socialMedia/whatsapp.svg";
 import { ReactComponent as Discord } from "assets/images/socialMedia/discord.svg";
-import { ReactComponent as Slack } from "assets/images/socialMedia/slack.svg";
 import { ReactComponent as Github } from "assets/images/socialMedia/github.svg";
 import ava from "assets/images/ava.png";
 import { Tilt } from "react-tilt";
@@ -51,16 +50,7 @@ export const LeftSidebar = () => {
         </li>
         <li>
           <a
-            href="https://slack.com/your_workspace"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Slack />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/your_username/"
+            href="https://www.instagram.com/i.kotau/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -69,7 +59,7 @@ export const LeftSidebar = () => {
         </li>
         <li>
           <a
-            href="https://wa.me/yourphonenumber"
+            href="https://wa.me/48730060649"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -78,7 +68,7 @@ export const LeftSidebar = () => {
         </li>
         <li>
           <a
-            href="https://github.com/your_username"
+            href="https://github.com/avkotau"
             target="_blank"
             rel="noopener noreferrer"
           >
