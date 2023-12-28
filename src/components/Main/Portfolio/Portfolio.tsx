@@ -3,6 +3,7 @@ import s from "components/Main//Portfolio/Portfolio.module.scss";
 import flashCard from "../../../assets/images/myPhotoFlashCard.png";
 import taskManager from "../../../assets/images/todolist.png";
 import chat from "../../../assets/images/chat.png";
+import devHub from "../../../assets/images/devHub.png";
 
 const Fade = require("react-reveal/Fade");
 export const Portfolio = () => (
@@ -37,6 +38,18 @@ export const Portfolio = () => (
         </a>
         <figcaption>
           <a href="https://avkotau.github.io/samurai-way-ts-redux-api">Chat</a>
+        </figcaption>
+      </figure>
+    </Fade>
+    <Fade right>
+      <figure>
+        <a href="https://avkotau.github.io/it-incubator-homeworks">
+          <img src={devHub} alt={"DevChallenges Hub"} />
+        </a>
+        <figcaption>
+          <a href="https://avkotau.github.io/it-incubator-homeworks">
+            DevChallenges Hub
+          </a>
         </figcaption>
       </figure>
     </Fade>
