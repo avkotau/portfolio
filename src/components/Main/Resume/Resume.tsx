@@ -6,23 +6,13 @@ export const Resume = () => (
     <h3 className={s.title}>Education & Experience</h3>
     <div className={s.educationWork}>
       <div>
-        <span>2023 - Present</span>
+        <span>2022</span>
         <h2>Front-End Developer</h2>
         <p>IT-INCUBATOR</p>
       </div>
       <div>
-        <span>2021 - Present</span>
-        <h2>Logistician</h2>
-        <p>Viessmann</p>
-      </div>
-      <div>
-        <span>2016 - 2020</span>
-        <h2>Estimation Engineer</h2>
-        <p>State Utility Enterprise 'Housing Maintenance'</p>
-      </div>
-      <div>
         <span>2021</span>
-        <h2>Learning English to the level pre-intermediate</h2>
+        <h2>Learning English</h2>
         <p>Don't Speak school</p>
       </div>
       <div>

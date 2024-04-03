@@ -11,33 +11,35 @@ export const Portfolio = () => (
     <h3 className={s.title}>Featured Projects</h3>
     <Fade left>
       <figure>
+        <a href="https://quizcreatorscards.vercel.app">
+          <img src={flashCard} alt={"Quiz Creators"} />
+        </a>
+        <figcaption>
+          <a href="https://quizcreatorscards.vercel.app/">Quiz Creators</a>
+        </figcaption>
+      </figure>
+    </Fade>
+    <Fade right>
+      <figure>
         <a href="https://avkotau.github.io/it-incubator-todolist-ts-toolkit">
-          <img src={taskManager} alt={"Task manager"} />
+          <img src={taskManager} alt={"DoneDeal Dashboard"} />
         </a>
         <figcaption>
           <a href="https://avkotau.github.io/it-incubator-todolist-ts-toolkit">
-            Task manager
+            DoneDeal Dashboard
           </a>
         </figcaption>
       </figure>
     </Fade>
-    <Fade right>
-      <figure>
-        <a href="https://flashcards-learning.vercel.app">
-          <img src={flashCard} alt={"Flash card"} />
-        </a>
-        <figcaption>
-          <a href="https://flashcards-learning.vercel.app">Flash cards</a>
-        </figcaption>
-      </figure>
-    </Fade>
-    <Fade right>
+    <Fade left>
       <figure>
         <a href="https://avkotau.github.io/samurai-way-ts-redux-api">
-          <img src={chat} alt={"Chat"} />
+          <img src={chat} alt={"ChatSphere"} />
         </a>
         <figcaption>
-          <a href="https://avkotau.github.io/samurai-way-ts-redux-api">Chat</a>
+          <a href="https://avkotau.github.io/samurai-way-ts-redux-api">
+            ChatSphere
+          </a>
         </figcaption>
       </figure>
     </Fade>

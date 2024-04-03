@@ -9,7 +9,7 @@ const Zoom = require("react-reveal/Zoom");
 export const Hero = () => (
   <section className={s.hero} id="home">
     <h1 className={s.title}>
-      Kotov Alexander
+      Aliaksandr Kotau
       <br />
       <ReactTypingEffect
         className={s.typingEffect}
