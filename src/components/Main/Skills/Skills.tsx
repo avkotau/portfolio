@@ -11,6 +11,7 @@ import {
   SiStorybook,
   SiTestcafe,
   SiTypescript,
+  SiNativescript,
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -36,6 +37,11 @@ export const Skills = () => (
       <div className={s.item}>
         <GrReactjs className={`${s.iconSize} ${s.srReactjs}`} />
         <span>React</span>
+      </div>
+
+      <div className={s.item}>
+        <SiNativescript className={`${s.iconSize} ${s.srReactjs}`} />
+        <span>React Native</span>
       </div>
 
       <div className={s.item}>
